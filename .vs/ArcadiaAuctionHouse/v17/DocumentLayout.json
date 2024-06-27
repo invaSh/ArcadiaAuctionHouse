@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\searchservice\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|solutionrelative:searchservice\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|solutionrelative:searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\searchservice\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|solutionrelative:searchservice\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\searchservice\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CD5BCF-69A9-4DC6-877F-F9566C1E4319}|SearchService\\SearchService.csproj|solutionrelative:searchservice\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "SearchService\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "SearchService\\Controllers\\SearchController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T18:03:20.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DBInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Data\\DBInitializer.cs",
+              "RelativeDocumentMoniker": "SearchService\\Data\\DBInitializer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Data\\DBInitializer.cs",
+              "RelativeToolTip": "SearchService\\Data\\DBInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T17:54:37.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Program.cs",
+              "RelativeDocumentMoniker": "SearchService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Program.cs",
+              "RelativeToolTip": "SearchService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:42:55.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "SearchService\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\SearchService\\Models\\Item.cs",
+              "RelativeToolTip": "SearchService\\Models\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:39:36.733Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
