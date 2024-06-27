@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\controllers\\auctionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\controllers\\auctionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\dtos\\item\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\dtos\\item\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\dtos\\item\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\dtos\\item\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\.net microservices \u002B next.js arcadia auction house\\src\\auctionservice\\dtos\\item\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\dtos\\item\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,80 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuctionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "RelativeToolTip": "src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAkwFMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:49:30.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Controllers\\ItemsController.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Controllers\\ItemsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Controllers\\ItemsController.cs",
-              "RelativeToolTip": "src\\AuctionService\\Controllers\\ItemsController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAIwFMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:17:03.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Models\\Item.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Models\\Item.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\Models\\Item.cs",
-              "RelativeToolTip": "src\\AuctionService\\Models\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:44:56.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\ItemDto.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\DTOs\\Item\\ItemDto.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\ItemDto.cs",
-              "RelativeToolTip": "src\\AuctionService\\DTOs\\Item\\ItemDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:44:44.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\CreateItemDto.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\DTOs\\Item\\CreateItemDto.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\CreateItemDto.cs",
-              "RelativeToolTip": "src\\AuctionService\\DTOs\\Item\\CreateItemDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:44:47.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\UpdateItemDto.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\DTOs\\Item\\UpdateItemDto.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\src\\AuctionService\\DTOs\\Item\\UpdateItemDto.cs",
-              "RelativeToolTip": "src\\AuctionService\\DTOs\\Item\\UpdateItemDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T11:44:37.681Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
