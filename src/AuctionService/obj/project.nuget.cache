@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EXnXj88ArQIP+wxPmqVdaFmNzrLuedKHqOQUTi3xdvCPBJptdzNyiaC6m54xSLPWxIkh9tcEk5g7sDYN+roMcg==",
+  "dgSpecHash": "/oohETwdX+uKixzzpvuMgLhkGOCf+EGFGfVcVwJo2x3H4epkJi51KX2hqTWoQ6bcYxk8+sMB6GUgYW/WMwdEBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction Housee\\src\\AuctionService\\AuctionService.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction House\\src\\AuctionService\\AuctionService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

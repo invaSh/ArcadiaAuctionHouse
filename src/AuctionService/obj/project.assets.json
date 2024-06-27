@@ -2446,11 +2446,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction Housee\\src\\AuctionService\\AuctionService.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction House\\src\\AuctionService\\AuctionService.csproj",
       "projectName": "AuctionService",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction Housee\\src\\AuctionService\\AuctionService.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction House\\src\\AuctionService\\AuctionService.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction Housee\\src\\AuctionService\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\.NET Microservices + Next.Js Arcadia Auction House\\src\\AuctionService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
