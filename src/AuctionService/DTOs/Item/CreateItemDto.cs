@@ -11,5 +11,6 @@
         public int YearOfCreation { get; set; }
         public string ImageUrl { get; set; }
         public string Provenance { get; set; }
+        public Guid AuctionId { get; set; }
     }
 }

@@ -23,16 +23,19 @@ namespace AuctionService.Data
                 return;
             }
 
-            var auctions = new List<Auction>()
-            {
+            var auctions = new List<Auction>
+{
                 // 1 Fine Arts Auction
                 new Auction
                 {
                     Id = Guid.Parse("afbee524-5972-4075-8800-7d1f9d7b0a0c"),
-                    Status = Status.Live,
-                    ReservePrice = 3000000,
+                    Title = "Fine Arts Auction",
                     Seller = "Gallery Modern",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                    AuctionStart = DateTime.UtcNow,
                     AuctionEnd = DateTime.UtcNow.AddDays(10),
+                    Status = Status.Live,
                     Items = new List<Item>
                     {
                         new Item
@@ -73,10 +76,13 @@ namespace AuctionService.Data
                 new Auction
                 {
                     Id = Guid.Parse("e2f8b607-d601-4218-93f8-d213a6d8f3f3"),
-                    Status = Status.Live,
-                    ReservePrice = 1200000,
+                    Title = "Vintage Watch Collection Auction",
                     Seller = "Prestige Timepieces",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                    AuctionStart = DateTime.UtcNow,
                     AuctionEnd = DateTime.UtcNow.AddDays(15),
+                    Status = Status.Live,
                     Items = new List<Item>
                     {
                         new Item
@@ -130,6 +136,7 @@ namespace AuctionService.Data
                     }
                 }
             };
+
 
             context.AddRange(auctions);
 

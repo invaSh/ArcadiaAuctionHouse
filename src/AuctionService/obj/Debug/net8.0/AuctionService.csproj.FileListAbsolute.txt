@@ -99,3 +99,4 @@ C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction Hou
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\.NET Microservices + Next.Js Arcadia Auction Housee\src\AuctionService\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\.NET Microservices + Next.Js Arcadia Auction Housee\src\AuctionService\obj\Debug\net8.0\AuctionService.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\.NET Microservices + Next.Js Arcadia Auction Housee\src\AuctionService\obj\Debug\net8.0\AuctionS.72D7E915.Up2Date
+C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\.NET Microservices + Next.Js Arcadia Auction Housee\src\AuctionService\obj\Debug\net8.0\AuctionService.sourcelink.json
