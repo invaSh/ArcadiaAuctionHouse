@@ -22,7 +22,7 @@ namespace AuctionService.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions()
+        public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions( )
         {
             var auctions = await _context.Auctions
                 .Include(x => x.Items)
