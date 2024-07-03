@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\project\\src\\searchservice\\searchservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\searchservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\project\\src\\searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-07-03T18:54:09.761Z",
+              "Title": "SearchService",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\src\\SearchService\\SearchService.csproj",
+              "RelativeDocumentMoniker": "src\\SearchService\\SearchService.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\src\\SearchService\\SearchService.csproj",
+              "RelativeToolTip": "src\\SearchService\\SearchService.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-03T19:05:05.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\src\\SearchService\\Program.cs",
+              "RelativeDocumentMoniker": "src\\SearchService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\src\\SearchService\\Program.cs",
+              "RelativeToolTip": "src\\SearchService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T19:01:58.89Z",
               "EditorCaption": ""
             }
           ]

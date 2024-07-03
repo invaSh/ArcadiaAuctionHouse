@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "oGCCbBx9BB3oPd1MdEjdAB3HSrTg09JzKBHPlO5BaXVVJFYjtuiQeTaCG+V0EAyCAMY2orNUzavNBOxEJgqdyA==",
-  "success": true,
+  "dgSpecHash": "VCPR0Eu0b0KfHZOTOP6UZoo3A8bl3+m7vTx+jhAdE08JDxWzIJmV6gyJ9U1TPLjhmUNtce5b98MoDvuppOcp6Q==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\AuctionService\\AuctionService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -60,5 +60,15 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
