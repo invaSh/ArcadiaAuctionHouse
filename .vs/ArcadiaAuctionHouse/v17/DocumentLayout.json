@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\.NET Microservices \u002B Next.Js Arcadia Auction House\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\project\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-07-03T18:54:09.761Z",
+              "EditorCaption": ""
             }
           ]
         }
