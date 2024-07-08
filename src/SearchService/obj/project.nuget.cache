@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b96oOIh+3kC47gwzDlLdvDyA2FQS8tu5TDqrOzANZolB7QOft/pJCwLMmRF4TYAfeOEchZW1LTeeHWYuPiJfqQ==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\SearchService\\SearchService.csproj",
+  "dgSpecHash": "Ri8t6Ee+OA7rtQabDB6wzQhPhJn8UXyj7JMzDk3Ccx3QU/5vcUsrMvzhqdIb+QEFGjdLYrpSOqHUePZWKfW1Aw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\SearchService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -42,15 +42,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

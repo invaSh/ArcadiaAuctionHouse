@@ -11,7 +11,8 @@ services:
         image: mongo
         environment:
             - MONGO_INITDB_ROOT_USERNAME=root
-            - MONGO_INITDB_ROOT_PASSWORD=123456
+            - MONGO_INITDB_ROOT_PASSWORD=mongopw
+        command: ["mongod", "--bind_ip", "0.0.0.0"]
         ports: 
             - 27017:27017
         volumes: 

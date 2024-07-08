@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

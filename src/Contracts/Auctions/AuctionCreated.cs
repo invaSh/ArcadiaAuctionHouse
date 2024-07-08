@@ -1,0 +1,22 @@
+﻿using Contracts.Items;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Contracts.Auctions
+{
+    public class AuctionCreated
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; }
+        public string Seller { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime AuctionStart { get; set; }
+        public DateTime AuctionEnd { get; set; }
+        public string Status { get; set; }
+        public List<ItemCreated> Items { get; set; } = new List<ItemCreated>();
+    }
+}

@@ -3,6 +3,8 @@ using AuctionService.DTOs.Auction;
 using AuctionService.DTOs.Item;
 using AuctionService.Models;
 using AutoMapper;
+using Contracts.Items;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -16,11 +18,13 @@ namespace AuctionService.Controllers
     {
         private readonly AuctionDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public ItemsController(AuctionDbContext context, IMapper mapper)
+        public ItemsController(AuctionDbContext context, IMapper mapper, IPublishEndpoint publishEndpoint)
         {
             _context = context;
             _mapper = mapper;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
@@ -44,11 +48,15 @@ namespace AuctionService.Controllers
 
             _context.Items.Add(item);
 
+            var newItem = _mapper.Map<ItemDto>(item);
+
+            await _publishEndpoint.Publish(_mapper.Map<ItemCreated>(newItem));
+
             var result = await _context.SaveChangesAsync() > 0;
 
             if (!result) return BadRequest("Could not save changes");
 
-            return CreatedAtAction(nameof(GetItem), new { item.Id }, _mapper.Map<ItemDto>(item));
+            return CreatedAtAction(nameof(GetItem), new { item.Id }, newItem);
         }
 
         [HttpPut("{id}")]

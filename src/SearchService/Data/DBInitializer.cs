@@ -32,6 +32,11 @@ namespace SearchService.Data
 
                 await DB.SaveAsync(items);
             }
+            else
+            {
+                Console.WriteLine("Already have data");
+
+            }
         }
     }
 }

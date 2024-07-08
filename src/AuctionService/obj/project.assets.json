@@ -78,6 +78,23 @@
           }
         }
       },
+      "MassTransit.EntityFrameworkCore/8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit": "8.2.3",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/MassTransit.EntityFrameworkCoreIntegration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MassTransit.EntityFrameworkCoreIntegration.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MassTransit.RabbitMQ/8.2.3": {
         "type": "package",
         "dependencies": {
@@ -1101,6 +1118,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.dll": {}
+        }
       }
     }
   },
@@ -1191,6 +1218,25 @@
         "lib/netstandard2.0/MassTransit.Abstractions.xml",
         "masstransit.abstractions.8.2.3.nupkg.sha512",
         "masstransit.abstractions.nuspec",
+        "mt-logo-small.png"
+      ]
+    },
+    "MassTransit.EntityFrameworkCore/8.2.3": {
+      "sha512": "u9HMg6VLOJY4771BC6opP3lONjblRM06Kl0jO8WaGE1y4pVnuPpMH61XD1O4mNmz9CDR8a8+WsqD+YjeMwlvZw==",
+      "type": "package",
+      "path": "masstransit.entityframeworkcore/8.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net6.0/MassTransit.EntityFrameworkCoreIntegration.dll",
+        "lib/net6.0/MassTransit.EntityFrameworkCoreIntegration.xml",
+        "lib/net8.0/MassTransit.EntityFrameworkCoreIntegration.dll",
+        "lib/net8.0/MassTransit.EntityFrameworkCoreIntegration.xml",
+        "lib/netstandard2.0/MassTransit.EntityFrameworkCoreIntegration.dll",
+        "lib/netstandard2.0/MassTransit.EntityFrameworkCoreIntegration.xml",
+        "masstransit.entityframeworkcore.8.2.3.nupkg.sha512",
+        "masstransit.entityframeworkcore.nuspec",
         "mt-logo-small.png"
       ]
     },
@@ -2876,12 +2922,19 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Contracts/Contracts.csproj",
+      "msbuildProject": "../Contracts/Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
+      "Contracts >= 1.0.0",
+      "MassTransit >= 8.2.3",
+      "MassTransit.EntityFrameworkCore >= 8.2.3",
       "MassTransit.RabbitMQ >= 8.2.3",
       "Microsoft.EntityFrameworkCore >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
@@ -2897,11 +2950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\AuctionService\\AuctionService.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\AuctionService.csproj",
       "projectName": "AuctionService",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\AuctionService\\AuctionService.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\AuctionService.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\AuctionService\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2918,8 +2971,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj"
+            "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Contracts.csproj"
             }
           }
         }
@@ -2942,6 +2995,14 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "MassTransit": {
+            "target": "Package",
+            "version": "[8.2.3, )"
+          },
+          "MassTransit.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.2.3, )"
           },
           "MassTransit.RabbitMQ": {
             "target": "Package",
@@ -2998,16 +3059,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices + Next.Js Arcadia Auction House\\project\\src\\Contracts\\Contracts.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

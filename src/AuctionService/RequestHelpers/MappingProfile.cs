@@ -2,6 +2,7 @@
 using AuctionService.DTOs.Item;
 using AuctionService.Models;
 using AutoMapper;
+using Contracts.Items;
 
 namespace AuctionService.RequestHelpers
 {
@@ -31,6 +32,8 @@ namespace AuctionService.RequestHelpers
 
             // Mapping for UpdateItemDto to Item
             CreateMap<UpdateItemDto, Item>();
+
+            CreateMap<ItemDto, ItemCreated>();
         }
     }
 }
