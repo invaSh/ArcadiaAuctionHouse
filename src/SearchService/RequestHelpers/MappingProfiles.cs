@@ -10,6 +10,10 @@ namespace SearchService.RequestHelpers
         public MappingProfiles()
         {
             CreateMap<ItemCreated, Item>();
+            CreateMap<ItemUpdated, Item>()
+                .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.Id));
+            CreateMap<ItemDeleted, Item>()
+                .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.Id));
         }
     }
 }

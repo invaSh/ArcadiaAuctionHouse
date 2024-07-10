@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\searchservice\\consumers\\items\\itemdeletedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\consumers\\items\\itemdeletedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\contracts\\items\\itemdeleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|solutionrelative:src\\contracts\\items\\itemdeleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\searchservice\\requesthelpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\requesthelpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net microservices \u002B next.js arcadia auction house\\arcadia\\src\\auctionservice\\requesthelpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\requesthelpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\Program.cs",
+              "RelativeDocumentMoniker": "src\\SearchService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\Program.cs",
+              "RelativeToolTip": "src\\SearchService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:17:29.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\RequestHelpers\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "src\\SearchService\\RequestHelpers\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\RequestHelpers\\MappingProfiles.cs",
+              "RelativeToolTip": "src\\SearchService\\RequestHelpers\\MappingProfiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:10:39.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "src\\AuctionService\\Controllers\\ItemsController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\Controllers\\ItemsController.cs",
               "RelativeToolTip": "src\\AuctionService\\Controllers\\ItemsController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwCcAAAAfAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAowGgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T16:51:19.676Z",
+              "WhenOpened": "2024-07-10T11:08:07.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemDeletedConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\Consumers\\Items\\ItemDeletedConsumer.cs",
+              "RelativeDocumentMoniker": "src\\SearchService\\Consumers\\Items\\ItemDeletedConsumer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\SearchService\\Consumers\\Items\\ItemDeletedConsumer.cs",
+              "RelativeToolTip": "src\\SearchService\\Consumers\\Items\\ItemDeletedConsumer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T10:48:57.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemDeleted.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Items\\ItemDeleted.cs",
+              "RelativeDocumentMoniker": "src\\Contracts\\Items\\ItemDeleted.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\Contracts\\Items\\ItemDeleted.cs",
+              "RelativeToolTip": "src\\Contracts\\Items\\ItemDeleted.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T10:46:31.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET Microservices \u002B Next.Js Arcadia Auction House\\Arcadia\\src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
+              "RelativeToolTip": "src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T10:45:45.651Z",
               "EditorCaption": ""
             }
           ]

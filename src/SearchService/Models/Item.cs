@@ -4,6 +4,11 @@ namespace SearchService.Models
 {
     public class Item : Entity
     {
+        public Guid GuidId
+        {
+            get => Guid.Parse(ID);
+            set => ID = value.ToString();
+        }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Dimensions { get; set; }

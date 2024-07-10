@@ -16,14 +16,20 @@ builder.Services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
+        cfg.ReceiveEndpoint("search-item-created", e =>
+        {
+            e.UseMessageRetry(r => r.Interval(30, 2));
+
+            e.ConfigureConsumer<ItemCreatedConsumer>(context);
+        });
+
+
         cfg.ConfigureEndpoints(context);
     });
 });
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-
+ 
 
 app.UseHttpsRedirection();
 

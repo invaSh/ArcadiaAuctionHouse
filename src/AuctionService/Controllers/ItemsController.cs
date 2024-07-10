@@ -5,6 +5,7 @@ using AuctionService.Models;
 using AutoMapper;
 using Contracts.Items;
 using MassTransit;
+using MassTransit.Transports;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -38,7 +39,10 @@ namespace AuctionService.Controllers
         public async Task<ActionResult<ItemDto>> GetItem(Guid id)
         {
             var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
-            return _mapper.Map<ItemDto>(item);
+
+            if(item != null) return _mapper.Map<ItemDto>(item);
+
+            return Ok(new { Message = "Not found" });
         }
 
         [HttpPost]
@@ -79,7 +83,11 @@ namespace AuctionService.Controllers
             item.Winner = itemDto.Winner;  
             item.SoldAmount = itemDto.SoldAmount; 
             item.CurrentHighBid = itemDto.CurrentHighBid;
+            item.AuctionId = itemDto.AuctionId;
 
+            Console.WriteLine("-------------------------------------->Updating item with auction ID: " + itemDto.AuctionId);
+
+            await _publishEndpoint.Publish(_mapper.Map<ItemUpdated>(itemDto));
 
             var res = await _context.SaveChangesAsync();
 
@@ -88,11 +96,27 @@ namespace AuctionService.Controllers
             return Ok("Auction successfully updated");
         }
 
-        //[HttpDelete("{id}")]
-        //public async Task<ActionResult> DeleteItem(Guid id)
-        //{
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteItem(Guid id)
+        {
+            var item = await _context.Items.FindAsync(id);
 
-        //}
+            if (item == null)
+            {
+                return NotFound(new { Message = "Item not found." }); 
+            }
+
+            _context.Items.Remove(item);
+
+            Console.WriteLine($"---------------------------------------------------------------> Publishing deleted item {item.Id}");
+            await _publishEndpoint.Publish<ItemDeleted>(new ItemDeleted {  Id = item.Id });
+
+            await _context.SaveChangesAsync();
+
+
+            return Ok(new { Message = "Deletion successful." });
+        }
+
 
     }
 }

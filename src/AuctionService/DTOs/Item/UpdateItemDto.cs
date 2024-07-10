@@ -2,6 +2,7 @@
 {
     public class UpdateItemDto
     {
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Dimensions { get; set; }
@@ -14,5 +15,6 @@
         public string Winner { get; set; }
         public int? SoldAmount { get; set; }
         public int? CurrentHighBid { get; set; }
+        public Guid AuctionId { get; set; }
     }
 }
