@@ -1,8 +1,14 @@
-﻿namespace SearchService.Models
+﻿using MongoDB.Entities;
+
+namespace SearchService.Models
 {
-    public class Auction
+    public class Auction : Entity
     {
-        public Guid Id { get; set; }
+        public Guid GuidId
+        {
+            get => Guid.Parse(ID);
+            set => ID = value.ToString();
+        }
         public string Title { get; set; }
         public string Seller { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

@@ -4,7 +4,7 @@ namespace SearchService.Models
 {
     public class Item : Entity
     {
-        public Guid GuidId
+        public Guid? GuidId
         {
             get => Guid.Parse(ID);
             set => ID = value.ToString();
@@ -21,6 +21,6 @@ namespace SearchService.Models
         public string Winner { get; set; }
         public int? SoldAmount { get; set; }
         public int? CurrentHighBid { get; set; }
-        public Guid AuctionId { get; set; }
+        public Guid? AuctionId { get; set; }
     }
 }

@@ -19,7 +19,7 @@
         public int? CurrentHighBid { get; set; }
 
         // Foreign key to the Auction
-        public Guid AuctionId { get; set; }
-        public Auction Auction { get; set; }
+        public Guid? AuctionId { get; set; }
+        public Auction? Auction { get; set; }
     }
 }

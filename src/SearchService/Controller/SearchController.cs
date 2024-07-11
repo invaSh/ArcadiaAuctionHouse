@@ -11,22 +11,40 @@ namespace SearchService.Controller
     public class SearchController : ControllerBase
     {
         [HttpGet("SearchItems")]
-        public async Task<ActionResult<List<Item>>> SearchItems(string searchTerm)
+        public async Task<ActionResult<Item>> SearchItems(string searchTerm)
         {
-            var query = DB.Find<Item>();
+            var itemQuery = DB.Find<Item>();
+            var auctionQuery = DB.Find<Auction>();
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query.Match(item => item.Title.Contains(searchTerm) ||
-                                            item.ArtistOrMaker.Contains(searchTerm) ||
-                                            item.Description.Contains(searchTerm));
+                var keywords = searchTerm.Split(' ');
+
+                itemQuery.Match(item =>
+                    keywords.Any(kw => item.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
+                    keywords.Any(kw => item.ArtistOrMaker.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
+                    keywords.Any(kw => item.Description.Contains(kw, StringComparison.OrdinalIgnoreCase))
+                );
+
+                auctionQuery.Match(auction =>
+                    keywords.Any(kw => auction.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
+                    keywords.Any(kw => auction.Seller.Contains(kw, StringComparison.OrdinalIgnoreCase)) 
+                );
             }
 
-            query.Sort(x => x.Ascending(a => a.ArtistOrMaker));
+            itemQuery.Sort(x => x.Ascending(a => a.ArtistOrMaker));
+            auctionQuery.Sort(x => x.Ascending(a => a.Title));
 
-            var result = await query.ExecuteAsync();
+            var itemsResult = await itemQuery.ExecuteAsync();
+            var auctionsResult = await auctionQuery.ExecuteAsync();
 
-            return result;
+            return Ok(new
+            {
+                ItemCount = itemsResult.Count,
+                AuctionCount = auctionsResult.Count,
+                Items = itemsResult,
+                Auctions = auctionsResult
+            });
         }
     }
 }

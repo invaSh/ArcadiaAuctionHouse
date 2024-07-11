@@ -14,6 +14,10 @@ namespace SearchService.RequestHelpers
                 .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.Id));
             CreateMap<ItemDeleted, Item>()
                 .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.Id));
+            CreateMap<AuctionCreated, Auction>()
+                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
+            CreateMap<AuctionUpdated, Auction>()
+                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
         }
     }
 }

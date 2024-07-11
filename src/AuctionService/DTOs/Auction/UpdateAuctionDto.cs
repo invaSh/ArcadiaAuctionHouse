@@ -4,6 +4,7 @@ namespace AuctionService.DTOs.Auction
 {
     public class UpdateAuctionDto
     {
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Seller { get; set; }
         public DateTime AuctionStart { get; set; }

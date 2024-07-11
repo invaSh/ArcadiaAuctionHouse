@@ -63,7 +63,7 @@ namespace AuctionService.Migrations
                     b.Property<string>("ArtistOrMaker")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("AuctionId")
+                    b.Property<Guid?>("AuctionId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("ConditionReport")
@@ -280,9 +280,7 @@ namespace AuctionService.Migrations
                 {
                     b.HasOne("AuctionService.Models.Auction", "Auction")
                         .WithMany("Items")
-                        .HasForeignKey("AuctionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AuctionId");
 
                     b.Navigation("Auction");
                 });

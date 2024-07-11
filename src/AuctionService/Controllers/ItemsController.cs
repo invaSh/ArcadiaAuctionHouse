@@ -29,11 +29,17 @@ namespace AuctionService.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ItemDto>>> GetAllItems()
+        public async Task<ActionResult> GetAllItems()
         {
             var items = await _context.Items.ToListAsync();
-            return _mapper.Map<List<ItemDto>>(items);
+            var itemDtos = _mapper.Map<List<ItemDto>>(items);
+            return Ok(new
+            {
+                Count = itemDtos.Count,
+                Items = itemDtos
+            });
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ItemDto>> GetItem(Guid id)
@@ -93,7 +99,7 @@ namespace AuctionService.Controllers
 
             if (res == 0) return BadRequest("Update not finished.");
 
-            return Ok("Auction successfully updated");
+            return Ok("Item successfully updated");
         }
 
         [HttpDelete("{id}")]

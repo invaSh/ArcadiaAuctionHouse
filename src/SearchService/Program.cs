@@ -1,4 +1,5 @@
 using MassTransit;
+using SearchService.Consumers.Auctions;
 using SearchService.Consumers.Items;
 using SearchService.Data;
 
@@ -11,6 +12,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumersFromNamespaceContaining<ItemCreatedConsumer>();
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
+
 
     x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false));
 
@@ -18,11 +21,17 @@ builder.Services.AddMassTransit(x =>
     {
         cfg.ReceiveEndpoint("search-item-created", e =>
         {
-            e.UseMessageRetry(r => r.Interval(30, 2));
+            e.UseMessageRetry(r => r.Interval(5, 5));
 
             e.ConfigureConsumer<ItemCreatedConsumer>(context);
         });
 
+        cfg.ReceiveEndpoint("search-auction-created", e =>
+        {
+            e.UseMessageRetry(r => r.Interval(5, 5));
+
+            e.ConfigureConsumer<AuctionCreatedConsumer>(context);
+        });
 
         cfg.ConfigureEndpoints(context);
     });
