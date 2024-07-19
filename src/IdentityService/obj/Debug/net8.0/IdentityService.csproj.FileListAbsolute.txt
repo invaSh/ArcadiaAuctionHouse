@@ -522,3 +522,4 @@ C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\IdentityService.pdb
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\IdentityService.genruntimeconfig.cache
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\ref\IdentityService.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\bin\Debug\net8.0\keys\is-signing-key-E3F38A7E6DC575AB704ADC3A4C2455BB.json

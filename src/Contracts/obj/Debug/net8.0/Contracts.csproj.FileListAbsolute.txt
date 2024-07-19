@@ -10,3 +10,15 @@ C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction Hou
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\Arcadia\src\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.pdb
 C:\Users\Admin\Desktop\projekte\.NET Microservices + Next.Js Arcadia Auction House\Arcadia\src\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\bin\Debug\net8.0\Contracts.deps.json
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\bin\Debug\net8.0\Contracts.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\bin\Debug\net8.0\Contracts.pdb
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\Contracts.pdb
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\Contracts\obj\Debug\net8.0\ref\Contracts.dll
