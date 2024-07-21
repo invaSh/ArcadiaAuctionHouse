@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MongoDB.Entities;
 using SearchService.Models;
 using System.Security;
@@ -10,8 +11,8 @@ namespace SearchService.Controller
     [ApiController]
     public class SearchController : ControllerBase
     {
-        [HttpGet("SearchItems")]
-        public async Task<ActionResult<Item>> SearchItems(string searchTerm)
+        [HttpGet]
+        public async Task<ActionResult> SearchItems(string searchTerm)
         {
             var itemQuery = DB.Find<Item>();
             var auctionQuery = DB.Find<Auction>();
@@ -20,31 +21,40 @@ namespace SearchService.Controller
             {
                 var keywords = searchTerm.Split(' ');
 
-                itemQuery.Match(item =>
-                    keywords.Any(kw => item.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
-                    keywords.Any(kw => item.ArtistOrMaker.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
-                    keywords.Any(kw => item.Description.Contains(kw, StringComparison.OrdinalIgnoreCase))
-                );
+                var itemsResult = await itemQuery.Match(i => 
+                               i.ArtistOrMaker.Contains(searchTerm) ||
+                               i.Title.Contains(searchTerm) ||
+                               i.Description.Contains(searchTerm))
+                .ExecuteAsync();
 
-                auctionQuery.Match(auction =>
-                    keywords.Any(kw => auction.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)) ||
-                    keywords.Any(kw => auction.Seller.Contains(kw, StringComparison.OrdinalIgnoreCase)) 
-                );
+                var auctionsResult = await auctionQuery.Match(a =>
+                                  a.Seller.Contains(searchTerm) ||
+                                  a.Title.Contains(searchTerm))
+                .ExecuteAsync();
+
+                return Ok(new
+                {
+                    ItemCount = itemsResult.Count,
+                    AuctionCount = auctionsResult.Count,
+                    Items = itemsResult,
+                    Auctions = auctionsResult
+                });
             }
 
-            itemQuery.Sort(x => x.Ascending(a => a.ArtistOrMaker));
-            auctionQuery.Sort(x => x.Ascending(a => a.Title));
-
-            var itemsResult = await itemQuery.ExecuteAsync();
-            var auctionsResult = await auctionQuery.ExecuteAsync();
+            var itemResult = await itemQuery.ExecuteAsync();
+            var auctionResult = await auctionQuery.ExecuteAsync();
 
             return Ok(new
-            {
-                ItemCount = itemsResult.Count,
-                AuctionCount = auctionsResult.Count,
-                Items = itemsResult,
-                Auctions = auctionsResult
+            {                                       
+                ItemCount = itemResult.Count,
+                AuctionCount = auctionResult.Count,
+                Items = itemResult,
+                Auctions = auctionResult
             });
+
+
         }
+
+
     }
 }

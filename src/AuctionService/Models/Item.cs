@@ -12,11 +12,13 @@
         public int YearOfCreation { get; set; }
         public string ImageUrl { get; set; }
         public string Provenance { get; set; }
+        public int? ReservePrice { get; set; }
 
         // Bidding related properties
         public string Winner { get; set; }
         public int? SoldAmount { get; set; }
         public int? CurrentHighBid { get; set; }
+        public bool Sold { get; set; }
 
         // Foreign key to the Auction
         public Guid? AuctionId { get; set; }
