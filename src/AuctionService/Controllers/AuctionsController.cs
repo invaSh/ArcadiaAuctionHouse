@@ -62,6 +62,7 @@ namespace AuctionService.Controllers
         {
             var auction = _mapper.Map<Auction>(auctionDto);
             auction.Seller = User.Identity.Name;
+            auctionDto.Seller = User.Identity.Name;
 
             _context.Auctions.Add(auction);
 
@@ -86,7 +87,6 @@ namespace AuctionService.Controllers
             if(auction.Seller != User.Identity.Name) return Forbid();
 
             auction.Title = auctionDto.Title;
-            auction.Seller = auctionDto.Seller;
             auction.AuctionStart = auctionDto.AuctionStart;
             auction.AuctionEnd = auctionDto.AuctionEnd;
             auction.UpdatedAt = DateTime.UtcNow;

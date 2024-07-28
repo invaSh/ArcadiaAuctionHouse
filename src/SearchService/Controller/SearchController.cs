@@ -21,7 +21,7 @@ namespace SearchService.Controller
             {
                 var keywords = searchTerm.Split(' ');
 
-                var itemsResult = await itemQuery.Match(i => 
+                var itemsResult = await itemQuery.Match(i =>
                                i.ArtistOrMaker.Contains(searchTerm) ||
                                i.Title.Contains(searchTerm) ||
                                i.Description.Contains(searchTerm))
@@ -31,6 +31,8 @@ namespace SearchService.Controller
                                   a.Seller.Contains(searchTerm) ||
                                   a.Title.Contains(searchTerm))
                 .ExecuteAsync();
+
+                if (auctionsResult.Count == 0) Console.WriteLine("---->auctions is coming back empty");
 
                 return Ok(new
                 {
@@ -44,17 +46,16 @@ namespace SearchService.Controller
             var itemResult = await itemQuery.ExecuteAsync();
             var auctionResult = await auctionQuery.ExecuteAsync();
 
+            if (auctionResult.Count == 0) Console.WriteLine("---->auctions is coming back empty");
+
             return Ok(new
-            {                                       
+            {
                 ItemCount = itemResult.Count,
                 AuctionCount = auctionResult.Count,
                 Items = itemResult,
                 Auctions = auctionResult
             });
-
-
         }
-
 
     }
 }

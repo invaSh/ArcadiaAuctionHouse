@@ -87,6 +87,12 @@ namespace AuctionService.Migrations
                     b.Property<string>("Provenance")
                         .HasColumnType("text");
 
+                    b.Property<int?>("ReservePrice")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("Sold")
+                        .HasColumnType("boolean");
+
                     b.Property<int?>("SoldAmount")
                         .HasColumnType("integer");
 
