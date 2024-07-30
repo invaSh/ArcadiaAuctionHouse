@@ -36,3 +36,4 @@ C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\GatewayService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\GatewayService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\GatewayService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\GatewayService\bin\Debug\net8.0\appsettings.Docker.json

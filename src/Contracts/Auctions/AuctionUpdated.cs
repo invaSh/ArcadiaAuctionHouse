@@ -15,6 +15,9 @@ namespace Contracts.Auctions
         public DateTime AuctionStart { get; set; }
         public DateTime AuctionEnd { get; set; }
         public string Status { get; set; }
+        public string ImageUrl { get; set; }
+        public string Description { get; set; }
+
         public List<ItemUpdated> Items { get; set; } = new List<ItemUpdated>();
     }
 }

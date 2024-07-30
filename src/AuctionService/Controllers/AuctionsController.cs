@@ -61,6 +61,7 @@ namespace AuctionService.Controllers
         public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto auctionDto)
         {
             var auction = _mapper.Map<Auction>(auctionDto);
+            auction.Description = auctionDto.Description;
             auction.Seller = User.Identity.Name;
             auctionDto.Seller = User.Identity.Name;
 
@@ -90,6 +91,8 @@ namespace AuctionService.Controllers
             auction.AuctionStart = auctionDto.AuctionStart;
             auction.AuctionEnd = auctionDto.AuctionEnd;
             auction.UpdatedAt = DateTime.UtcNow;
+            auction.ImageUrl = auctionDto.ImageUrl;
+            auction.Description = auctionDto.Description;
 
             Console.WriteLine("-------------------------------------->Updating auction with ID: " + auction.Id);
 

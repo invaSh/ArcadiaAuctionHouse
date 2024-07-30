@@ -1,7 +1,11 @@
-import Listings from "./auctions/Listings";
+
+import Listings from "./pages/Listings";
 
 export default function Home() {
+
+ 
   return (
+    
   <div>
     <h3 className="text-3xl font-semibold">
       <Listings/>

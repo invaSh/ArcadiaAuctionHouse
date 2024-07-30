@@ -1,5 +1,6 @@
+
 import "./globals.css";
-import Navbar from "./nav/Navbar";
+import App from "./pages/_app"
 
 export const metadata = {
   title: "Arcadia Auction House",
@@ -10,8 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main className="container mx-auto px-5 pt-10">{children}</main>
+        <App children={children} />
       </body>
     </html>
   );
