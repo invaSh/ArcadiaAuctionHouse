@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import Preloader from "../pages/Preloader";
+import Preloader from "../../pages/Preloader";
 
 const PageWrapper = ({ children, setLoadingState }) => {
   const [loading, setLoading] = useState(true);

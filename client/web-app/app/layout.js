@@ -1,6 +1,7 @@
 
 import "./globals.css";
-import App from "./pages/_app"
+import App from "../pages/_app"
+import SearchModal from "@/app/search/page";
 
 export const metadata = {
   title: "Arcadia Auction House",

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "animate.css-react": "^1.1.0",
     "lottie-web": "^5.12.2",
     "next": "14.2.5",
     "react": "^18",

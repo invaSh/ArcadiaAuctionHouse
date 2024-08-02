@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\auctionservice\\requesthelpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\requesthelpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\auctionservice\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\contracts\\auctions\\auctionupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|solutionrelative:src\\contracts\\auctions\\auctionupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\auctionservice\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\contracts\\auctions\\auctioncreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55028623-C6D3-48FA-A9A0-CDC9FACD55B9}|src\\Contracts\\Contracts.csproj|solutionrelative:src\\contracts\\auctions\\auctioncreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\searchservice\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\searchservice\\consumers\\auctions\\auctioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\consumers\\auctions\\auctioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\searchservice\\controller\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81F070A-F071-4512-8F48-4CB5D61896FC}|src\\SearchService\\SearchService.csproj|solutionrelative:src\\searchservice\\controller\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\auctionservice\\controllers\\auctionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\controllers\\auctionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F854F47-08CB-47A9-B353-7DB6D95AED1C}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
-              "RelativeToolTip": "src\\AuctionService\\RequestHelpers\\MappingProfile.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "src\\AuctionService\\Models\\Status.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Models\\Status.cs",
+              "RelativeToolTip": "src\\AuctionService\\Models\\Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T11:02:10.675Z",
+              "WhenOpened": "2024-08-01T08:53:30.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuctionUpdated.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\Contracts\\Auctions\\AuctionUpdated.cs",
-              "RelativeDocumentMoniker": "src\\Contracts\\Auctions\\AuctionUpdated.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\Contracts\\Auctions\\AuctionUpdated.cs",
-              "RelativeToolTip": "src\\Contracts\\Auctions\\AuctionUpdated.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Auction.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Models\\Auction.cs",
+              "RelativeDocumentMoniker": "src\\AuctionService\\Models\\Auction.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Models\\Auction.cs",
+              "RelativeToolTip": "src\\AuctionService\\Models\\Auction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T11:01:59.482Z",
+              "WhenOpened": "2024-08-01T08:53:23.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuctionCreated.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\Contracts\\Auctions\\AuctionCreated.cs",
-              "RelativeDocumentMoniker": "src\\Contracts\\Auctions\\AuctionCreated.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\Contracts\\Auctions\\AuctionCreated.cs",
-              "RelativeToolTip": "src\\Contracts\\Auctions\\AuctionCreated.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAvAAAA",
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "src\\AuctionService\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "src\\AuctionService\\Controllers\\ItemsController.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAuwHcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T11:01:49.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Auction.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Models\\Auction.cs",
-              "RelativeDocumentMoniker": "src\\SearchService\\Models\\Auction.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Models\\Auction.cs",
-              "RelativeToolTip": "src\\SearchService\\Models\\Auction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBMAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T10:56:35.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuctionCreatedConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Consumers\\Auctions\\AuctionCreatedConsumer.cs",
-              "RelativeDocumentMoniker": "src\\SearchService\\Consumers\\Auctions\\AuctionCreatedConsumer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Consumers\\Auctions\\AuctionCreatedConsumer.cs",
-              "RelativeToolTip": "src\\SearchService\\Consumers\\Auctions\\AuctionCreatedConsumer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T10:56:29.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SearchController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Controller\\SearchController.cs",
-              "RelativeDocumentMoniker": "src\\SearchService\\Controller\\SearchController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\SearchService\\Controller\\SearchController.cs",
-              "RelativeToolTip": "src\\SearchService\\Controller\\SearchController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T10:56:24.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuctionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "RelativeToolTip": "src\\AuctionService\\Controllers\\AuctionsController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwD8AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T10:53:24.35Z",
+              "WhenOpened": "2024-08-01T08:52:13.257Z",
               "EditorCaption": ""
             }
           ]

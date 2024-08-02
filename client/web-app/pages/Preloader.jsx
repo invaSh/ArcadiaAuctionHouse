@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import load from '../components/lottie/Preload.json';
+import load from '../app/components/lottie/Preload.json';
 
 function Preloader() {
   const defaultOptions = {
