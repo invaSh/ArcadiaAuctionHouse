@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace AuctionService.Controllers
 {
@@ -62,8 +63,16 @@ namespace AuctionService.Controllers
         {
             var auction = _mapper.Map<Auction>(auctionDto);
             auction.Description = auctionDto.Description;
-            auction.Seller = User.Identity.Name;
-            auctionDto.Seller = User.Identity.Name;
+
+            var username = User.FindFirstValue("name");
+
+            if (string.IsNullOrEmpty(username))
+            {
+                return BadRequest("Username is missing in the token");
+            }
+
+            auction.Seller = username;
+            auctionDto.Seller = username;
 
             _context.Auctions.Add(auction);
 

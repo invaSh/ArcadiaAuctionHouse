@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
+import LoginButton from "./LoginButton";
+import UserActions from "./UserActions.jsx";
+import { useSession } from "next-auth/react";
 
 function Navbar() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const { data: session, status } = useSession();
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -39,13 +44,14 @@ function Navbar() {
       }}
     >
       <div
-        style={{ backgroundColor: "#413d49", padding: "3rem"}}
+        style={{ backgroundColor: "#413d49", padding: "3rem" }}
         className="absolute top-0 hidden md:block"
       >
         <span className="text-6xl text-violet-50 z-50">arcadia</span>
       </div>
       <span className="text-4xl px-5 text-violet-50">arcadia</span>
       <div>List</div>
+      {session?.user ? <UserActions user={session.user}/> : <LoginButton />}
       <Search />
     </header>
   );

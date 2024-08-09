@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&display=swap');
-@import '/node_modules/animate.css/animate.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,10 +47,37 @@ html {
 }
 
 .text-hover:hover{
-  color: gray;
+  color: rgb(168, 168, 168);
   transition: .3s ease;
 }
 
 .text-shadow{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.login-hover:hover{
+  background-color: transparent !important;
+ }
+
+button[data-testid="flowbite-dropdown-target"] {
+  background-color: transparent;
+  letter-spacing: 0.25em;
+  outline: none; 
+  box-shadow: none;
+  transition-property: none !important;
+  transition-duration: 0s !important;
+}
+
+button[data-testid="flowbite-dropdown-target"]:hover {
+  background-color: transparent !important;
+  color: rgb(168, 168, 168);
+}
+
+button[data-testid="flowbite-dropdown-target"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button[data-testid="flowbite-dropdown-target"] svg {
+    display: none;
 }

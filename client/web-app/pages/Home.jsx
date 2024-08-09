@@ -59,7 +59,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {auctions.length > 0 ? (
             auctions.map((auction, index) => (
-              <AuctionCard key={index} auction={auction} />
+              <AuctionCard key={auction.id} auction={auction} />
             ))
           ) : (
             <div>No auctions available</div>
@@ -75,7 +75,7 @@ export default function Home() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {auctions.slice(0, 2).map((auction) => (
-            <LiveAuctionCard key={auction.Id} auction={auction} />
+            <LiveAuctionCard key={auction.id} auction={auction} />
           ))}
         </div>
       </div>

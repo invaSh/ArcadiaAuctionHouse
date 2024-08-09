@@ -23,14 +23,14 @@ namespace SearchService.Data
 
             if (count == 0)
             {
-                Console.WriteLine("No data - will attempt to seed");
-                var itemData = await File.ReadAllTextAsync("Data/items.json");
+                //Console.WriteLine("No data - will attempt to seed");
+                //var itemData = await File.ReadAllTextAsync("Data/items.json");
 
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                //var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
-                var items = JsonSerializer.Deserialize<List<Item>>(itemData, options);
+                //var items = JsonSerializer.Deserialize<List<Item>>(itemData, options);
 
-                await DB.SaveAsync(items);
+                //await DB.SaveAsync(items);
             }
             else
             {

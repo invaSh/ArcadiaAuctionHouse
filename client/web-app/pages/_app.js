@@ -1,18 +1,20 @@
-"use client"
-import 'animate.css/animate.min.css'; 
+"use client";
+import "animate.css/animate.min.css";
 import React, { useState } from "react";
 import { SearchProvider } from "@/context/SearchContext";
 import Navbar from "../app/components/nav/Navbar";
 import PageWrapper from "../app/components/PageWrapper";
 import SearchModal from "@/pages/SearchModal";
 import { useSearch } from "@/context/SearchContext";
-
+import { SessionProvider } from "next-auth/react";
 
 function App({ children }) {
   return (
-    <SearchProvider> 
-      <AppContent children={children} /> 
-    </SearchProvider>
+    <SessionProvider>
+      <SearchProvider>
+        <AppContent children={children} />
+      </SearchProvider>
+    </SessionProvider>
   );
 }
 
