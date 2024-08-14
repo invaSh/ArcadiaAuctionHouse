@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AuctionCard(props) {
   const { auction } = props;
@@ -23,9 +24,9 @@ export default function AuctionCard(props) {
           <p className="text-gray text-sm font-se mb-2 font-syne">
             {formatDate(auction.auctionStart)}
           </p>
-          <a className="inline-block px-4 underline text-sm hover:text-gray-500 tracking-widest cursor-pointer">
+          <Link href={`/user/auctions/details/${auction.id}`} className="inline-block px-4 underline text-sm hover:text-gray-500 tracking-widest cursor-pointer">
             VIEW LOTS
-          </a>
+          </Link>
         </div>
       </div>
     </div>

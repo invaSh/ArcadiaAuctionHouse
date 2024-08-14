@@ -3,6 +3,7 @@ import Search from "./Search";
 import LoginButton from "./LoginButton";
 import UserActions from "./UserActions.jsx";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 function Navbar() {
   const [show, setShow] = useState(true);
@@ -41,17 +42,22 @@ function Navbar() {
         transform: show ? "translateY(0)" : "translateY(-100%)",
         opacity: show ? 1 : 0,
         width: "100%",
+        borderColor: "transparent",
       }}
     >
       <div
         style={{ backgroundColor: "#413d49", padding: "3rem" }}
         className="absolute top-0 hidden md:block"
       >
-        <span className="text-6xl text-violet-50 z-50">arcadia</span>
+        <span className="cursor-pointer text-6xl text-violet-50 z-50">
+          <Link href={"/"}>arcadia</Link>
+        </span>
       </div>
-      <span className="text-4xl px-5 text-violet-50">arcadia</span>
+      <span className="cursor-pointer text-4xl px-5 text-violet-50">
+        <Link href={"/"}>arcadia</Link>
+      </span>
       <div>List</div>
-      {session?.user ? <UserActions user={session.user}/> : <LoginButton />}
+      {session?.user ? <UserActions user={session.user} /> : <LoginButton />}
       <Search />
     </header>
   );

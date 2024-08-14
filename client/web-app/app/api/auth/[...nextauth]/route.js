@@ -21,7 +21,6 @@ export const authOptions = {
         token.username = profile.name[0];
         token.email = profile.email;
         token.access_token = account.access_token
-        console.log("----->token: ",{ token });
       }
 
       
@@ -30,6 +29,7 @@ export const authOptions = {
     async session({ session, token }) {
       session.user.username = token.username;
       session.user.email = token.email;
+      session.access_token = token.access_token
       return session;
     },
   },

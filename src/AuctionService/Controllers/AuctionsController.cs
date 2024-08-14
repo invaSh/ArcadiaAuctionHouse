@@ -82,8 +82,9 @@ namespace AuctionService.Controllers
 
             if (!result) return BadRequest("Could not save changes");
 
-            return Ok("Auction Created");
-        }
+            return CreatedAtAction(nameof(GetAuction), new { auction.Id }, auction);
+        
+    }
 
         [Authorize]
         [HttpPut("{id}")]

@@ -9,8 +9,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   }
 };
 
-function CountDownTimer({ auctionEnd }) {
+export function CountDownTimer({ auctionEnd }) {
   return <Countdown date={auctionEnd} renderer={renderer} />;
 }
 
-export default CountDownTimer;

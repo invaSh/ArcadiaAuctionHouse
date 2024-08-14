@@ -13,8 +13,11 @@ function UserActions({ user }) {
     <Dropdown
       label={
         <div className="flex items-center drop-button text-xl font-syne">
-          {user.username} 
-          <PiUserCircleThin className="mx-2 text-4xl" style={{ display: "block" }} /> 
+          {user.username}
+          <PiUserCircleThin
+            className="mx-2 text-4xl"
+            style={{ display: "block" }}
+          />
         </div>
       }
       className="font-syne"
@@ -32,16 +35,27 @@ function UserActions({ user }) {
           </span>
         </div>
       </Dropdown.Header>
-      <Dropdown.Item icon={GiColumnVase}>My Items</Dropdown.Item>
-      <Dropdown.Item icon={GiPorcelainVase}>Items Won</Dropdown.Item>
-      <Dropdown.Item icon={BsTagsFill}>Sell My Own</Dropdown.Item>
+      <Dropdown.Item icon={GiPorcelainVase}>
+        <Link href={`/user/items/won-list/${user.username}`}>Items Won</Link>
+      </Dropdown.Item>
+      <Dropdown.Item icon={GiColumnVase}>
+        <Link href={`/user/items/sold-list/${user.username}`}>Items on Sale</Link>
+      </Dropdown.Item>
+      <Dropdown.Item icon={BsTagsFill}>
+        <Link href="/user/items/create">Sell My Own</Link>
+      </Dropdown.Item>
       <Dropdown.Item>
         <Link href="/session">
           <span className="block text-sm">Session</span>
         </Link>
       </Dropdown.Item>
       <Dropdown.Divider />
-      <Dropdown.Item icon={VscSignOut} onClick={() => signOut({callbackUrl: "/"})}>Sign out</Dropdown.Item>
+      <Dropdown.Item
+        icon={VscSignOut}
+        onClick={() => signOut({ callbackUrl: "/" })}
+      >
+        Sign out
+      </Dropdown.Item>
     </Dropdown>
   );
 }

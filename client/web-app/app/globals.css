@@ -81,3 +81,19 @@ button[data-testid="flowbite-dropdown-target"]:focus {
 button[data-testid="flowbite-dropdown-target"] svg {
     display: none;
 }
+
+
+#large:focus {
+  outline: rgb(65, 61, 73);
+  border-color: rgb(65, 61, 73);
+  box-shadow: none;
+}
+
+.img-hover{
+  transition: filter 0.3s ease; 
+  cursor: pointer;
+}
+
+.img-hover:hover{
+  filter: brightness(50%);
+}

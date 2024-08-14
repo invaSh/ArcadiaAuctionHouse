@@ -1,4 +1,3 @@
-"use server"
 import { getToken } from "next-auth/jwt";
 import { headers, cookies } from "next/headers";
 
@@ -9,7 +8,8 @@ export async function getAccessToken() {
       cookies: Object.fromEntries(cookies().getAll().map((c) => [c.name, c.value])),
     };
 
-    return await getToken({ req });
+    const token = await getToken({ req });
+    return token ? token.accessToken : null;
   } catch (error) {
     console.error("Error retrieving access token:", error);
     return null;

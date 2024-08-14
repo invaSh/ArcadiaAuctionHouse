@@ -7,6 +7,7 @@ import PageWrapper from "../app/components/PageWrapper";
 import SearchModal from "@/pages/SearchModal";
 import { useSearch } from "@/context/SearchContext";
 import { SessionProvider } from "next-auth/react";
+import ToasterProvider from "@/app/providers/ToasterProvider";
 
 function App({ children }) {
   return (
@@ -24,6 +25,7 @@ function AppContent({ children }) {
 
   return (
     <div>
+      <ToasterProvider />
       {!isLoading && <Navbar />}
       {isSearchOpen && <SearchModal res={searchResults} open={isSearchOpen} />}
       <PageWrapper setLoadingState={setIsLoading}>
