@@ -14,7 +14,7 @@ namespace AuctionService.Consumers
         }
         public async Task Consume(ConsumeContext<ItemSold> context)
         {
-            var item = await _context.Items.FindAsync(context.Message.Id);
+            var item = await _context.Items.FindAsync(Guid.Parse(context.Message.Id));
             var auction = await _context.Auctions.FindAsync(item.AuctionId);
 
 
@@ -27,6 +27,7 @@ namespace AuctionService.Consumers
                         item.Winner = context.Message.Winner;
                         item.SoldAmount = context.Message.Amount;
                         item.Sold = true;
+                        item.CurrentHighBid = context.Message.Amount;
                     }
                     else
                     {

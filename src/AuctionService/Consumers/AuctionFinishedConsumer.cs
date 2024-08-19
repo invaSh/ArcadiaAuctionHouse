@@ -17,11 +17,6 @@ namespace AuctionService.Consumers
         {
            var auction = await _context.Auctions.FindAsync(context.Message.AuctionId);
 
-            if(context.Message.IsAllItemsSold || context.Message.IsTimeElapsed)
-            {
-                auction.Status = Status.Finished; 
-            }
-
             await _context.SaveChangesAsync();
         }
     }

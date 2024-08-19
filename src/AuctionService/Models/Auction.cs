@@ -12,8 +12,8 @@
             public Status Status { get; set; }
             public string ImageUrl { get; set; }
 
-        public string Description { get; set; }
-        // Navigation property for the related items
-        public ICollection<Item> Items { get; set; } = new List<Item>();
+            public string Description { get; set; }
+            // Navigation property for the related items
+            public ICollection<Item> Items { get; set; } = new List<Item>();
     }
 }

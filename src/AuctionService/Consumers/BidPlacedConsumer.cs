@@ -16,16 +16,16 @@ namespace AuctionService.Consumers
         {
             Console.WriteLine("--->Consuming Bid");
 
-            var item = await _context.Items.FindAsync(context.Message.ItemId);
+            var item = await _context.Items.FindAsync(Guid.Parse(context.Message.ItemId));
 
-            if(item.CurrentHighBid == null
+            if(item.CurrentHighBid == null 
                 || context.Message.BidStatus.Contains("Accepted")
                 && context.Message.Amount > item.CurrentHighBid)
             {
                 item.CurrentHighBid = context.Message.Amount;
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
         }
     }
 }

@@ -1,3 +1,4 @@
+using AuctionService.Consumers;
 using AuctionService.Data;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -34,6 +35,11 @@ builder.Services.AddMassTransit(x =>
         o.UseBusOutbox();
     });
 
+    x.AddConsumersFromNamespaceContaining<BidPlacedConsumer>();
+
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auction", false));
+
+
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(builder.Configuration["RabbitMq:Host"], "/", host =>
@@ -41,6 +47,12 @@ builder.Services.AddMassTransit(x =>
             host.Username(builder.Configuration.GetValue<string>("RabbitMq:Username", "guest"));
             host.Password(builder.Configuration.GetValue<string>("RabbitMq:Password", "guest"));
         });
+
+        cfg.ReceiveEndpoint("auction-bid-placed", e =>
+        {
+            e.ConfigureConsumer<BidPlacedConsumer>(context);
+        });
+
         cfg.ConfigureEndpoints(context);
     });
 });

@@ -6,6 +6,7 @@ EXPOSE 80
 # USE OF THE SAME COPY COMMAND FOR EVERY DOCKERFILE IN THE PROJECT TO TAKE THE ADVANTAGE OF DOCKER CACHING
 COPY ArcadiaAuctionHouse.sln ArcadiaAuctionHouse.sln
 COPY src/AuctionService/AuctionService.csproj src/AuctionService/AuctionService.csproj
+COPY src/BiddingService/BiddingService.csproj src/BiddingService/BiddingService.csproj
 COPY src/GatewayService/GatewayService.csproj src/GatewayService/GatewayService.csproj
 COPY src/SearchService/SearchService.csproj src/SearchService/SearchService.csproj
 COPY src/IdentityService/IdentityService.csproj src/IdentityService/IdentityService.csproj

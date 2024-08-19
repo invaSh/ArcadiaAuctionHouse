@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QMVfnWCvH2s=",
+  "dgSpecHash": "en2d4d1uKvs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\AuctionService\\AuctionService.csproj",
   "expectedPackageFiles": [
@@ -8,9 +8,10 @@
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\identitymodel\\7.0.0\\identitymodel.7.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\masstransit\\8.2.3\\masstransit.8.2.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\masstransit.abstractions\\8.2.3\\masstransit.abstractions.8.2.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\masstransit\\8.2.4\\masstransit.8.2.4.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\masstransit.abstractions\\8.2.4\\masstransit.abstractions.8.2.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\masstransit.entityframeworkcore\\8.2.3\\masstransit.entityframeworkcore.8.2.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\masstransit.extensions.dependencyinjection\\7.3.1\\masstransit.extensions.dependencyinjection.7.3.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\masstransit.rabbitmq\\8.2.3\\masstransit.rabbitmq.8.2.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.7\\microsoft.aspnetcore.authentication.jwtbearer.8.0.7.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

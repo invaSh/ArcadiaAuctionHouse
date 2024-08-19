@@ -534,3 +534,5 @@ C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\AuctionService\obj\Debug\net8.0\AuctionS.72D7E915.Up2Date
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\AuctionService\obj\Debug\net8.0\AuctionService.genruntimeconfig.cache
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\AuctionService\obj\Debug\net8.0\ref\AuctionService.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\AuctionService\bin\Debug\net8.0\IdentityModel.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\AuctionService\bin\Debug\net8.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
