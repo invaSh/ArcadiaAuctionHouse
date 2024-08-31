@@ -1,15 +1,16 @@
 import { getDetailedView } from "@/app/actions/itemActions";
 import React from "react";
-import BiddingButton from "@/app/components/auctions/Button";
-import Select from "@/app/components/Select";
+import PlaceBidForm from "@/app/components/items/PlaceBidForm";
+import { getHighestBid } from "@/app/actions/bidActions";
 
 async function Details({ params }) {
   const item = await getDetailedView(params.id);
-
-  const today = new Date();
+  const bid = await getHighestBid(params.id)
+  const today = new Date();  
 
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = today.toLocaleDateString("en-US", options);
+
 
   return (
     <div
@@ -82,12 +83,12 @@ async function Details({ params }) {
             </p>
           </div>
         </div>
-        <div className="border-b border-gray-300 py-10">
-          <p>starting bid: ${item.reservePrice}4,000</p>
-          <div className="grid grid-cols-2 gap-3 mt-5">
-            <Select className="col-span-1" />
-            <BiddingButton text={"place bid"} className="col-span-1" />
-          </div>
+        <div className="border-b border-gray-300 py-10 text-center">
+          <p>starting bid: ${item.reservePrice ? item.reservePrice : `1000`}</p>
+          <PlaceBidForm item={item} id={params.id}/>
+        </div>
+        <div className="border-b border-gray-300 py-10 text-center">
+          Your current Bid: <span className="ml-5 border p-5 shadow-md">${bid.amount}</span>
         </div>
       </div>
     </div>

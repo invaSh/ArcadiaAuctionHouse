@@ -1,5 +1,7 @@
 import { getToken } from "next-auth/jwt";
 import { headers, cookies } from "next/headers";
+import { getSession } from "next-auth/react";
+
 
 export async function getAccessToken() {
   try {

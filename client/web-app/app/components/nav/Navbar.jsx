@@ -56,8 +56,15 @@ function Navbar() {
       <span className="cursor-pointer text-4xl px-5 text-violet-50">
         <Link href={"/"}>arcadia</Link>
       </span>
-      <div>List</div>
-      {session?.user ? <UserActions user={session.user} /> : <LoginButton />}
+      <div className="flex gap-8 justify-end w-[80%]">
+          <ul className="flex gap-5 text-white my-auto">
+            <li className="text-hover cursor-pointer">auctions</li>
+            <li className="text-hover cursor-pointer">
+              <a>stories</a>
+            </li>
+          </ul>
+        {session?.user ? <UserActions user={session.user} /> : <LoginButton />}
+      </div>
       <Search />
     </header>
   );

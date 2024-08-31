@@ -47,7 +47,7 @@ export default function AuctionForm() {
           rules={{ required: "Title is required " }}
         />
 
-        <div className="flex justify-around">
+        <div className="flex gap-3">
           <DateInput
             label="Auction End Date"
             name="auctionEnd"
@@ -78,9 +78,8 @@ export default function AuctionForm() {
             isProcessing={isSubmitting}
             type="submit"
             disabled={!isValid}
-            style={{ backgroundColor: "#413D49" }}
           >
-            Submit
+            Create
           </Button>
         </div>
       </form>

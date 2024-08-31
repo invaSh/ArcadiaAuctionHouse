@@ -25,15 +25,13 @@ namespace BiddingService.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult<BidDto>> PlaceBid([FromQuery]Guid itemId, [FromQuery]int amount)
+        public async Task<ActionResult<BidDto>> PlaceBid([FromBody] PlaceBidRequest request)
         {
-            var item = await DB.Find<Item>().OneAsync(itemId);
+            var item = await DB.Find<Item>().OneAsync(request.ItemId);
             var user = User.Identity.Name;
 
             if (item == null)
             {
-                //check with auction service
-
                 return NotFound();
             }
 
@@ -46,8 +44,8 @@ namespace BiddingService.Controllers
 
             var bid = new Bid
             {
-                Amount = amount,
-                ItemId = itemId,
+                Amount = request.Amount,
+                ItemId = request.ItemId,
                 Bidder = user
             };
 
@@ -58,13 +56,13 @@ namespace BiddingService.Controllers
             else
             {
                 var highBid = await DB.Find<Bid>()
-                               .Match(i => i.ItemId == itemId)
+                               .Match(i => i.ItemId == request.ItemId)
                                .Sort(b => b.Descending(x => x.Amount))
                                .ExecuteFirstAsync();
 
-                if (highBid != null && amount > highBid.Amount || highBid == null)
+                if (highBid != null && request.Amount > highBid.Amount || highBid == null)
                 {
-                    bid.BidStatus = amount > item.ReservePrice
+                    bid.BidStatus = request.Amount > item.ReservePrice
                         ? BidStatus.Accepted
                         : BidStatus.AcceptedBelowReserve;
                 }
@@ -78,7 +76,6 @@ namespace BiddingService.Controllers
             await DB.SaveAsync(bid);
             await _publishEndpoint.Publish(_mapper.Map<BidPlaced>(bid));
             return Ok(_mapper.Map<BidDto>(bid));
-
         }
 
         [HttpGet("{itemId}")]
@@ -90,6 +87,25 @@ namespace BiddingService.Controllers
                  .ExecuteAsync();
 
             return bids.Select(_mapper.Map<BidDto>).ToList();
+        }
+
+        [Authorize]
+        [HttpGet("highest/{itemId}")]
+        public async Task<ActionResult<BidDto>> GetHighestBidForUserForItem(Guid itemId)
+        {
+            var user = User.Identity.Name;
+
+            var highestBid = await DB.Find<Bid>()
+                .Match(b => b.Bidder == user && b.ItemId == itemId)
+                .Sort(b => b.Descending(x => x.Amount))
+                .ExecuteFirstAsync();
+
+            if (highestBid == null)
+            {
+                return NotFound("No bids found for the current user on the specified item.");
+            }
+
+            return Ok(_mapper.Map<BidDto>(highestBid));
         }
     }
 }

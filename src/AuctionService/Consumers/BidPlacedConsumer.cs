@@ -19,8 +19,7 @@ namespace AuctionService.Consumers
             var item = await _context.Items.FindAsync(Guid.Parse(context.Message.ItemId));
 
             if(item.CurrentHighBid == null 
-                || context.Message.BidStatus.Contains("Accepted")
-                && context.Message.Amount > item.CurrentHighBid)
+                || context.Message.Amount > item.CurrentHighBid)
             {
                 item.CurrentHighBid = context.Message.Amount;
                 await _context.SaveChangesAsync();

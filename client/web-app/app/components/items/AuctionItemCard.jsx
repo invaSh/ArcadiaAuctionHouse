@@ -16,10 +16,15 @@ function AuctionItemCard({ index, item }) {
           <p className="font-thin text-gray-500 truncate">
             reserve price - ${item.reservePrice}10,000
           </p>
-          <p className="font-bold truncate">
-            {item.currentHighBid
-              ? `current bid: $${item.currentBid}`
-              : `no bids have been placed`}
+          <p className="truncate">
+            {item.currentHighBid ? (
+              <>
+                <span className="font-thin text-gray-500">current bid: </span>
+                <span className="font-bold">${item.currentHighBid}</span>
+              </>
+            ) : (
+              `no bids have been placed`
+            )}
           </p>
         </Link>
       </div>
