@@ -11,6 +11,11 @@ public static class Config
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
             new IdentityResources.Email(),
+            new IdentityResource(
+            name: "roles",
+            displayName: "Roles",
+            userClaims: new[] { "role" }
+        )
 
         };
 
@@ -41,7 +46,7 @@ public static class Config
                 RequirePkce = false,
                 RedirectUris = {"http://localhost:3000/api/auth/callback/id-server"},
                 AllowOfflineAccess = true,
-                AllowedScopes = {"openid", "profile", "email","auctionApp" },
+                AllowedScopes = {"openid", "profile", "email", "roles", "auctionApp" },
                 AlwaysIncludeUserClaimsInIdToken = true,
                 AccessTokenLifetime = 3600 * 24 * 30
             }

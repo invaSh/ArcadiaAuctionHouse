@@ -34,9 +34,12 @@ internal static class HostingExtensions
                     options.IssuerUri = "identity-svc";
                 }
 
+                options.KeyManagement.Enabled = false;
+
                 // see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
                 //options.EmitStaticAudienceClaim = true;
             })
+            .AddDeveloperSigningCredential()
             .AddInMemoryIdentityResources(Config.IdentityResources)
             .AddInMemoryApiScopes(Config.ApiScopes)
             .AddInMemoryClients(Config.Clients)
@@ -49,6 +52,17 @@ internal static class HostingExtensions
         });
 
         builder.Services.AddAuthentication();
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("CorsPolicy", builder =>
+                builder.WithOrigins("http://localhost:3000")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+        });
+
+
 
         return builder.Build();
     }
@@ -66,7 +80,7 @@ internal static class HostingExtensions
         app.UseRouting();
         app.UseIdentityServer();
         app.UseAuthorization();
-        
+        app.UseCors("CorsPolicy");
         app.MapRazorPages()
             .RequireAuthorization();
 

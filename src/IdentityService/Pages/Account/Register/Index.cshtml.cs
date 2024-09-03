@@ -51,6 +51,8 @@ namespace IdentityService.Pages.Account.Register
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
+                result = await _userManager.AddToRoleAsync(user, "User");
+
                 if (result.Succeeded)
                 {
                     await _userManager.AddClaimsAsync(user, new Claim[]
@@ -59,6 +61,7 @@ namespace IdentityService.Pages.Account.Register
                     });
 
                     RegisterSuccess = true;
+                    return LocalRedirect(Input.ReturnUrl ?? "/");
                 }
             }
 

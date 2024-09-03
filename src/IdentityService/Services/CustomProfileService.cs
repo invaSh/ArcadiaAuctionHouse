@@ -21,24 +21,22 @@ namespace IdentityService.Services
 
             if (user == null)
             {
-                // Handle the case where the user could not be found
                 return;
             }
 
-            // Get existing claims from the user
             var existingClaims = await _userManager.GetClaimsAsync(user);
 
-            // Define the claims to issue
             var claims = new List<Claim>
-    {
-        new Claim(JwtClaimTypes.Subject, user.Id),
-        new Claim(JwtClaimTypes.Name, user.UserName),
-        new Claim(JwtClaimTypes.Email, user.Email),
-        new Claim(JwtClaimTypes.EmailVerified, user.EmailConfirmed.ToString(), ClaimValueTypes.Boolean),
-        // Add any additional claims you need
-    };
+            {
+                new Claim(JwtClaimTypes.Subject, user.Id),
+                new Claim(JwtClaimTypes.Name, user.UserName),
+                new Claim(JwtClaimTypes.Email, user.Email),
+                new Claim(JwtClaimTypes.EmailVerified, user.EmailConfirmed.ToString(), ClaimValueTypes.Boolean),
+            };
 
-            // Add existing claims that match the requested claim types
+            var userRoles = await _userManager.GetRolesAsync(user);
+            claims.AddRange(userRoles.Select(role => new Claim(JwtClaimTypes.Role, role)));
+
             var requestedClaims = context.RequestedClaimTypes;
             foreach (var claim in existingClaims)
             {
@@ -48,7 +46,6 @@ namespace IdentityService.Services
                 }
             }
 
-            // Set the issued claims
             context.IssuedClaims = claims;
         }
 
