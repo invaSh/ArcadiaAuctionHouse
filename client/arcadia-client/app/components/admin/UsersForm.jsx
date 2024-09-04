@@ -1,6 +1,12 @@
 import React from "react";
 
 const Form = ({ title, fields, values, onChange, onSubmit }) => {
+
+  const userRole = values.role;
+
+  console.log(userRole);
+  
+
   return (
     <div className="flex items-center justify-center mx-auto px-4">
       <form className="w-full max-w-lg shadow-md p-5" onSubmit={onSubmit}>
@@ -23,9 +29,9 @@ const Form = ({ title, fields, values, onChange, onSubmit }) => {
                     value={values[field.name]}
                     onChange={onChange}
                   >
-                    <option value="admin">Admin</option>
-                    <option value="employee">employee</option>
-                    <option value="user">User</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Employee">Employee</option>
+                    <option value="User">User</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg
@@ -56,7 +62,7 @@ const Form = ({ title, fields, values, onChange, onSubmit }) => {
             className="shadow bg-black hover:bg-gray-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="submit"
           >
-            Create User
+            {title === "Edit User" ? "Update User" : "Create User"}
           </button>
         </div>
       </form>

@@ -14,7 +14,7 @@ function UserActions({ user }) {
     <Dropdown
       label={
         <div className="flex items-center drop-button text-xl font-syne">
-          {user.username}
+          {user.name}
           <PiUserCircleThin
             className="mx-2 text-4xl"
             style={{ display: "block" }}
@@ -30,7 +30,7 @@ function UserActions({ user }) {
           className="w-10 h-10 rounded-full mr-2"
         />
         <div>
-          <span className="block text-sm">{user.name[1]}</span>
+          <span className="block text-sm">{user.name}</span>
           <span className="block truncate text-sm font-medium">
             {user.email}
           </span>

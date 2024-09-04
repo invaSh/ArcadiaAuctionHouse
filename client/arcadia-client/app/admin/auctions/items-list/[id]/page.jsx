@@ -11,7 +11,7 @@ export default async function ItemsList({ params }) {
         Items for Auction "{auction.title}"
       </h1>
       {items.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {items.map((item, index) => (
             <div key={index} className="border rounded-lg shadow-md p-4">
               <img
@@ -20,7 +20,11 @@ export default async function ItemsList({ params }) {
                 className="w-full h-32 object-cover mt-2 rounded"
               />
               <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p className="text-gray-600">{item.description}</p>
+              <div className="truncate-container">
+                <p className="text-gray-600 truncate-text">
+                  {item.description}
+                </p>
+              </div>
               <p className="text-sm text-gray-500">
                 Dimensions: {item.dimensions}
               </p>
@@ -38,24 +42,15 @@ export default async function ItemsList({ params }) {
               </p>
               <div className="mt-4 flex space-x-2">
                 {/* Button for removing the item from auction */}
-                <button
-                  
-                  className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded"
-                >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">
                   Remove from Auction
                 </button>
                 {/* Button for hiding the item */}
-                <button
-                  
-                  className="bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded"
-                >
+                <button className="bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded">
                   Hide
                 </button>
                 {/* Button for deleting the item */}
-                <button
-                  
-                  className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded"
-                >
+                <button className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded">
                   Delete
                 </button>
               </div>

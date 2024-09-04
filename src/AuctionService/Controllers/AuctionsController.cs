@@ -84,7 +84,7 @@ namespace AuctionService.Controllers
 
             return CreatedAtAction(nameof(GetAuction), new { auction.Id }, auction);
         
-    }
+        }
 
         [Authorize]
         [HttpPut("{id}")]

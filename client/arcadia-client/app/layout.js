@@ -14,14 +14,22 @@ export default async function RootLayout({ children }) {
 
   if (session && session.user) {
     const user = session.user;
-    isAdmin = (user.roles.includes("Admin") || user.roles.includes("Manager"));
+    isAdmin = user.roles.includes("Admin") || user.roles.includes("Manager");
   }
 
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
       <body className={isAdmin ? "grid grid-cols-12" : ""}>
-      {isAdmin ? <AdminNavbar /> : <Navbar />}
-        <main className={isAdmin ? "col-span-10 col-start-3 font-syne" : ""}>{children}</main>
+        {isAdmin ? <AdminNavbar /> : <Navbar />}
+        <main className={isAdmin ? "col-span-10 col-start-3 font-syne" : ""}>
+          {children}
+        </main>
       </body>
     </html>
   );

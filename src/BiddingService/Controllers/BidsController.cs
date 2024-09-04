@@ -102,7 +102,7 @@ namespace BiddingService.Controllers
 
             if (highestBid == null)
             {
-                return NotFound("No bids found for the current user on the specified item.");
+                return NotFound("You haven't placed any bids yet.");
             }
 
             return Ok(_mapper.Map<BidDto>(highestBid));

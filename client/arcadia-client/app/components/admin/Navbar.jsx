@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 export default function Navbar() {
   return (
@@ -116,7 +117,7 @@ export default function Navbar() {
           <ListItemPrefix>
             <FaPowerOff className="h-5 w-5 mr-2" />
           </ListItemPrefix>
-          Log out
+          <span onClick={() => signOut({ callbackUrl: "/" })}>Log out</span>
         </ListItem>
       </List>
     </Card>

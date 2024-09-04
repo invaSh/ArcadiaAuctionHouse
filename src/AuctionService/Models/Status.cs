@@ -3,6 +3,7 @@
     public enum Status
     {
         Live,
-        Finished
+        Finished,
+        HasNotStarted
     }
 }

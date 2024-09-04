@@ -45,9 +45,22 @@ namespace IdentityService.Controllers
                 return NotFound($"User with ID {id} not found.");
             }
 
+            var roles = await _userManager.GetRolesAsync(user);
+            var role = roles.FirstOrDefault(); 
 
-            return Ok(user);
+            var userResponse = new
+            {
+                Username = user.UserName,
+                FullName = user.FullName,
+                Email = user.Email,
+                Password = (string?)null,  
+                OldPassword = (string?)null,  
+                Role = role ?? "No Role" 
+            };
+
+            return Ok(userResponse);
         }
+
 
         [Authorize]
         [HttpPost]

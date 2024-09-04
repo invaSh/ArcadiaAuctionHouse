@@ -28,7 +28,7 @@ export default function Edit({ params }) {
         const userDetails = await getUserDetails(userId);
         setUser({
             fullName: userDetails.fullName || "", // Ensure fields are never undefined
-            username: userDetails.userName || "",
+            username: userDetails.username || "",
             email: userDetails.email || "",
             role: userDetails.role || "",
             password: "",
@@ -113,20 +113,26 @@ export default function Edit({ params }) {
 
   return (
     <div className="p-12">
-      {loading && <p className="text-center">Loading...</p>}
-      {error && (
-        <p className="text-red-500 text-center">
-          {typeof error === "string" ? error : error.message}
-        </p>
+      {loading ? (
+        <p className="text-center">Loading...</p>
+      ) : (
+        <>
+          {error && (
+            <p className="text-red-500 text-center">
+              {typeof error === "string" ? error : error.message}
+            </p>
+          )}
+          {success && <p className="text-green-500 text-center">{success}</p>}
+          <Form
+            title="Edit User"
+            fields={userFields}
+            values={user}
+            onChange={handleChange}
+            onSubmit={handleSubmit}
+          />
+        </>
       )}
-      {success && <p className="text-green-500 text-center">{success}</p>}
-      <Form
-        title="Edit User"
-        fields={userFields}
-        values={user}
-        onChange={handleChange}
-        onSubmit={handleSubmit}
-      />
     </div>
   );
+  
 }
