@@ -10,6 +10,7 @@ C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Humanizer.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\IdentityModel.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Admin\Desktop\projekte\.NET_Microservices_Next.Js_Arcadia_Auction_House\Arcadia\src\IdentityService\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

@@ -56,11 +56,11 @@ export default function Navbar() {
           <MenuList className="bg-white p-3 font-syne">
             <MenuItem className="p-2 border-b-2 text-lg flex">
               <FaAngleRight className="my-auto mr-2" />
-              <Link href={`/admin/auctions/create`}>Create New User</Link>
+              <Link href={`/admin/users/create`}>Create New User</Link>
             </MenuItem>
             <MenuItem className="p-2 text-lg flex">
               <FaAngleRight className="my-auto mr-2" />
-              <Link href={`/admin/auctions/list`}>View All Users</Link>
+              <Link href={`/admin/users/list`}>View All Users</Link>
             </MenuItem>
           </MenuList>
         </Menu>

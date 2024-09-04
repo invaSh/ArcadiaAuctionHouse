@@ -19,7 +19,7 @@ namespace IdentityService
             var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
             var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-            string [] roleNames = { "Admin", "User", "Manager" };
+            string [] roleNames = { "Admin", "User", "Employee" };
 
             if (roleMgr.Roles.Any()) return;
 

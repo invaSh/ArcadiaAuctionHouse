@@ -2,6 +2,7 @@ using Duende.IdentityServer;
 using IdentityService.Data;
 using IdentityService.Models;
 using IdentityService.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -28,6 +29,8 @@ internal static class HostingExtensions
                 options.Events.RaiseInformationEvents = true;
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
+                options.UserInteraction.LoginUrl = "/Account/Login";
+                options.UserInteraction.LoginReturnUrlParameter = "returnUrl";
 
                 if (builder.Environment.IsEnvironment("Docker"))
                 {
@@ -51,7 +54,14 @@ internal static class HostingExtensions
             options.Cookie.SameSite = SameSiteMode.Lax;
         });
 
-        builder.Services.AddAuthentication();
+        builder.Services.AddAuthentication()
+        .AddJwtBearer(options =>
+        {
+            options.Authority = "http://identity-svc";
+            options.RequireHttpsMetadata = false;
+            options.TokenValidationParameters.ValidateAudience = false;
+            options.TokenValidationParameters.NameClaimType = "name";
+        });
 
         builder.Services.AddCors(options =>
         {
@@ -78,9 +88,12 @@ internal static class HostingExtensions
 
         app.UseStaticFiles();
         app.UseRouting();
-        app.UseIdentityServer();
-        app.UseAuthorization();
         app.UseCors("CorsPolicy");
+        app.UseIdentityServer();
+        app.UseAuthentication();
+        app.UseAuthorization();
+        app.MapControllers();
+
         app.MapRazorPages()
             .RequireAuthorization();
 

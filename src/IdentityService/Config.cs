@@ -48,7 +48,8 @@ public static class Config
                 AllowOfflineAccess = true,
                 AllowedScopes = {"openid", "profile", "email", "roles", "auctionApp" },
                 AlwaysIncludeUserClaimsInIdToken = true,
-                AccessTokenLifetime = 3600 * 24 * 30
+                AccessTokenLifetime = 3600 * 24 * 30                            ,
+                AllowedCorsOrigins = { "http://localhost:3000" }
             }
 
         };
