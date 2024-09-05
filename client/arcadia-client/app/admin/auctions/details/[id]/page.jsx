@@ -4,7 +4,18 @@ import Link from "next/link";
 
 async function Details({ params }) {
   const auction = await getDetailedView(params.id);
-
+  function getStatusClass(status) {
+    switch (status) {
+      case 0:
+        return "bg-green-600"; // Green for live auctions
+      case 1:
+        return "bg-red-600"; // Red for finished auctions
+      case 2:
+        return "bg-blue-600"; // Blue for upcoming auctions
+      default:
+        return "bg-gray-600"; // Gray for unspecified or other statuses
+    }
+  }
   return (
     <div className="container mx-auto px-4 py-8 font-syne">
       <div className="bg-white shadow overflow-hidden sm:rounded-lg">
@@ -51,14 +62,22 @@ async function Details({ params }) {
             </div>
             <div className="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Status</dt>
-              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {auction.status === 0
-                  ? "Live"
-                  : auction.status === 1
-                  ? "Finished"
-                  : auction.status === 2
-                  ? "Hasn't started"
-                  : "Not specified"}
+              <dd
+                className={`mt-1 text-xl text-white sm:mt-0 sm:col-span-2 rounded-md`}
+              >
+                <span
+                  className={`rounded-md py-2 px-3 ${getStatusClass(
+                    auction.status
+                  )}`}
+                >
+                  {auction.status === 0
+                    ? "Live"
+                    : auction.status === 1
+                    ? "Finished"
+                    : auction.status === 2
+                    ? "Hasn't started"
+                    : "Not specified"}
+                </span>
               </dd>
             </div>
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

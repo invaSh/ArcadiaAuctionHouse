@@ -14,7 +14,7 @@ namespace AuctionService.Consumers
         }
         public async Task Consume(ConsumeContext<BidPlaced> context)
         {
-            Console.WriteLine("--->Consuming Bid");
+            Console.WriteLine("=====================================================================================>Consuming Bid");
 
             var item = await _context.Items.FindAsync(Guid.Parse(context.Message.ItemId));
 

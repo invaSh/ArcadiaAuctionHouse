@@ -11,7 +11,7 @@ async function Details({ params }) {
   function getStatusClass(status) {
     switch (status) {
       case 0:
-        return "bg-green-600 animate__animated animate__pulse"; // Green for live auctions
+        return "bg-green-600"; // Green for live auctions
       case 1:
         return "bg-red-600"; // Red for finished auctions
       case 2:

@@ -74,9 +74,20 @@ namespace AuctionService.Controllers
             auction.Seller = username;
             auctionDto.Seller = username;
 
+            if (auctionDto.AuctionStart > DateTime.UtcNow) 
+            { 
+            
+                auction.Status = Status.HasNotStarted;
+            } 
+            else if (auctionDto.AuctionEnd <= auctionDto.AuctionStart)
+            {
+                return BadRequest("The auction end time must be later than the start time.");
+            }
+
             _context.Auctions.Add(auction);
 
-            await _publishEndpoint.Publish(_mapper.Map<AuctionCreated>(auctionDto));
+
+            await _publishEndpoint.Publish(_mapper.Map<AuctionCreated>(auction));
 
             var result = await _context.SaveChangesAsync() > 0;
 

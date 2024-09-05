@@ -17,6 +17,10 @@ namespace AuctionService.Consumers
         {
            var auction = await _context.Auctions.FindAsync(context.Message.AuctionId);
 
+
+            auction.Status = Status.Finished;
+
+
             await _context.SaveChangesAsync();
         }
     }

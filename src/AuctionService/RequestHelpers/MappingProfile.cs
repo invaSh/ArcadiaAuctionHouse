@@ -35,7 +35,7 @@ namespace AuctionService.RequestHelpers
             CreateMap<Item, ItemDeleted>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id));
 
-            CreateMap<CreateAuctionDto, AuctionCreated>()
+            CreateMap<Auction, AuctionCreated>()
                 .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
 
             CreateMap<CreateItemDto, ItemCreated>();
