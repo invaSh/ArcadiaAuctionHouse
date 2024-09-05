@@ -13,6 +13,7 @@
     "flowbite-react": "^0.10.1",
     "next": "14.2.7",
     "next-auth": "^4.24.7",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",

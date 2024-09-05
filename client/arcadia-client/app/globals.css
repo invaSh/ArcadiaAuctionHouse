@@ -99,6 +99,3 @@ button[data-testid="flowbite-dropdown-target"] svg {
   filter: brightness(50%);
 }
 
-.bg-green-600.animate__animated.animate__pulse {
-  animation: pulse 2s infinite !important;
-}

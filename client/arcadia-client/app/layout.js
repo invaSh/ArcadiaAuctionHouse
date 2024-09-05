@@ -11,6 +11,8 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const session = await getSession();
   let isAdmin;
+  let showNavbar = true;
+
 
   if (session && session.user) {
     const user = session.user;
@@ -19,14 +21,8 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-      </head>
       <body className={isAdmin ? "grid grid-cols-12" : ""}>
-        {isAdmin ? <AdminNavbar /> : <Navbar />}
+        {showNavbar && (isAdmin ? <AdminNavbar /> : <Navbar />)}
         <main className={isAdmin ? "col-span-10 col-start-3 font-syne" : ""}>
           {children}
         </main>
