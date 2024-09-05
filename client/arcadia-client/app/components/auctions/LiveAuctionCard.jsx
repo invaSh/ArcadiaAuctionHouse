@@ -1,4 +1,5 @@
 import React from "react";
+import { CountDownTimer } from "./CountDownTimer";
 
 function LiveAuctionCard({ auction }) {
   return (
@@ -12,7 +13,7 @@ function LiveAuctionCard({ auction }) {
       </div>
       <div className="col-span-12 md:col-span-8">
         <h1 className="text-5xl font-bold text-gray-700">
-          {/* <CountDownTimer auctionEnd={new Date(auction.auctionEnd)} /> */}
+          <CountDownTimer auctionEnd={new Date(auction.auctionEnd)} />
         </h1>
         <h3 className="text-2xl pb-3 pt-5 border-b-2 font-thin" style={{ textTransform: "uppercase" }}>
           {auction.title}
@@ -23,7 +24,7 @@ function LiveAuctionCard({ auction }) {
         </p>
         </div>
         
-        <a href={`/auctions/${auction.Id}`} className="inline-block underline text-sm hover:text-gray-600 tracking-widest cursor-pointer font-medium">
+        <a href={`/user/auctions/details/${auction.id}`} className="inline-block underline text-sm hover:text-gray-600 tracking-widest cursor-pointer font-medium">
           VIEW AUCTION IN FULL
         </a>
       </div>

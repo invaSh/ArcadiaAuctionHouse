@@ -165,5 +165,21 @@ namespace AuctionService.Controllers
             return Ok(new { Message = "Auction successfully deleted." });
         }
 
+        [HttpGet("upcoming")]
+        public async Task<ActionResult<List<Auction>>> GetUpcomingAuctions()
+        {
+            var upcomingAuctions = await _context.Auctions
+                .Where(a => a.Status == Status.HasNotStarted && a.AuctionStart > DateTime.UtcNow)
+                .ToListAsync();
+
+            if (upcomingAuctions.Count == 0)
+            {
+                return NotFound("No upcoming auctions found.");
+            }
+
+
+            return Ok(upcomingAuctions);
+        }
+
     }
 }

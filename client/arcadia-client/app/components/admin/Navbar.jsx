@@ -99,7 +99,7 @@ export default function Navbar() {
           <ListItemPrefix>
             <FaHandPaper className="h-5 w-5 mr-2" />
           </ListItemPrefix>
-          Bids
+          <Link href={`/admin/bids/list`}>Bids</Link>
         </ListItem>
         <ListItem>
           <ListItemPrefix>

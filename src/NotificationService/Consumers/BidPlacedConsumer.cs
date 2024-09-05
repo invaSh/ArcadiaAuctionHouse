@@ -18,7 +18,12 @@ namespace NotificationService.Consumers
         {
             Console.WriteLine("---->bid placed message recieved");
 
-            await _hubContext.Clients.All.SendAsync("BidPlaced", context.Message);
+            var message = $"{context.Message.Bidder} has bid ${context.Message.Amount} on item with id #{context.Message.ItemId}";
+
+            await _hubContext.Clients.All.SendAsync("BidPlaced", message);
+
+            Console.WriteLine("----> Notification sent to all clients");
+
         }
     }
 }

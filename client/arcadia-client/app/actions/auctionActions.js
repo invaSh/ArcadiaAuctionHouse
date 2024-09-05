@@ -15,3 +15,7 @@ export async function getDetailedView(id){
 export async function getAllAuctions(){
     return await fetchWrapper.get("auctions")
 }
+
+export async function getUpcomingAuctions(){
+    return await fetchWrapper.get("auctions/upcoming")
+}

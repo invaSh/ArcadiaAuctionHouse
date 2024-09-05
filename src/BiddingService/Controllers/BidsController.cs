@@ -89,6 +89,19 @@ namespace BiddingService.Controllers
             return bids.Select(_mapper.Map<BidDto>).ToList();
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<BidDto>>> GetAllBids()
+        {
+            var bids = await DB.Find<Bid>()
+                 .Sort(b => b.Descending(b => b.BidTime))
+                 .ExecuteAsync();
+
+            var bidDtos = bids.Select(bid => _mapper.Map<BidDto>(bid)).ToList();
+            return Ok(bidDtos); 
+        }
+
+
+
         [Authorize]
         [HttpGet("highest/{itemId}")]
         public async Task<ActionResult<BidDto>> GetHighestBidForUserForItem(Guid itemId)

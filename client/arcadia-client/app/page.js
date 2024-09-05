@@ -1,13 +1,19 @@
 import AuctionBanner from "./components/auctions/AuctionBanner";
 import StoryCard from "./components/blogs/StoryCard";
 import Browse from "./components/auctions/Browse";
-import { getAllAuctions } from "./actions/auctionActions";
+import { getUpcomingAuctions, getAllAuctions } from "./actions/auctionActions";
 import AuctionCard from "./components/auctions/AuctionCard";
 import LiveAuctionCard from "./components/auctions/LiveAuctionCard";
 import RegisterBanner from "./components/RegisterBanner";
 
 export default async function Home() {
+  const upcomingAuctions = await getUpcomingAuctions();
+  upcomingAuctions.slice(0, 5);
+
   const auctions = (await getAllAuctions()).auctions;
+  const liveAuctions = auctions.filter(auction => auction.status === 0);
+  console.log(liveAuctions);
+
 
   return (
     <div>
@@ -37,8 +43,8 @@ export default async function Home() {
           Upcoming Auctions
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {auctions.length > 0 ? (
-            auctions.map((auction, index) => (
+          {upcomingAuctions.length > 0 ? (
+            upcomingAuctions.map((auction, index) => (
               <AuctionCard key={auction.id} auction={auction} />
             ))
           ) : (
@@ -54,7 +60,7 @@ export default async function Home() {
           Live Auctions
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {auctions.slice(0, 2).map((auction) => (
+          {liveAuctions.slice(0, 2).map((auction) => (
             <LiveAuctionCard key={auction.id} auction={auction} />
           ))}
         </div>

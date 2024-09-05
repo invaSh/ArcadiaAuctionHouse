@@ -9,6 +9,10 @@ export async function getBids(id){
     return fetchWrapper.get(`bids/${id}`)
 }
 
+export async function getAllBids(){
+    return fetchWrapper.get("bids")
+}
+
 export async function getHighestBid(id){
     return fetchWrapper.get(`bids/highest/${id}`)
 }
