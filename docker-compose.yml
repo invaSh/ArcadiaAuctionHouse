@@ -105,6 +105,24 @@ services:
             - 7004:80
         depends_on:
             - rabbitmq
+    image-svc:
+        image: invaSh/image-svc:latest
+        build: 
+            context: .
+            dockerfile: src/ImageService/Dockerfile
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:80   
+            - RabbitMq__Host=rabbitmq
+            - ConnectionStrings__ImageConnection=mongodb://root:mongopw@mongodb
+            - IdentityServiceUrl=http://identity-svc 
+        ports:
+            - 7005:80
+        depends_on:
+            - mongodb
+            - rabbitmq
+        env_file:
+            - .env
 volumes:
     pgdata:
     mongodata:

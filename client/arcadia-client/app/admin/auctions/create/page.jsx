@@ -16,13 +16,13 @@ function Create() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);  // State for success message
+  const [success, setSuccess] = useState(null); 
 
   const auctionFields = [
     { name: 'title', label: 'Title', type: 'text', placeholder: 'Auction Title' },
     { name: 'auctionStart', label: 'Auction Start Date', type: 'datetime-local' },
     { name: 'auctionEnd', label: 'Auction End Date', type: 'datetime-local' },
-    { name: 'imageUrl', label: 'Image URL', type: 'text', placeholder: 'http://example.com/image.jpg' },
+    { name: 'imageUrl', label: 'Thumbnail', type: 'file', placeholder: '' },
     { name: 'description', label: 'Description', type: 'textarea', placeholder: 'Detailed description of the auction' },
   ];
 
