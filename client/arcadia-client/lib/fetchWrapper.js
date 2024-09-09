@@ -22,6 +22,21 @@ async function post(url, body) {
   return await handleResponse(response);
 }
 
+async function postImg(url, body) {
+
+
+  const requestOptions = {
+    method: "POST",
+    headers: await getImgHeaders(),
+    body: body,
+  };
+
+  console.log(baseUrl + url, requestOptions);
+  
+  const response = await fetch(baseUrl + url, requestOptions);
+  return await handleResponse(response);
+}
+
 async function put(url, body) {
   const requestOptions = {
     method: "PUT",
@@ -53,6 +68,17 @@ async function getHeaders() {
   return headers;
 }
 
+async function getImgHeaders() {
+  const token = await getAccessToken();
+
+  const headers = {};
+  if (token) {
+    headers.Authorization = "Bearer " + token.access_token;
+  }
+
+  return headers;
+}
+
 async function handleResponse(response) {
   const text = await response.text();
 
@@ -69,7 +95,7 @@ async function handleResponse(response) {
     const error = {
       status: response.status,
       message: data || response.statusText,
-      url: response.url, // Include URL in error message
+      url: response.url,
       headers: response.headers,
     };
     return { error };
@@ -81,4 +107,5 @@ export const fetchWrapper = {
   post,
   put,
   del,
+  postImg
 };

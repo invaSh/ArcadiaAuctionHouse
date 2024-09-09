@@ -11,6 +11,8 @@
         public string ArtistOrMaker { get; set; }
         public int YearOfCreation { get; set; }
         public string ImageUrl { get; set; }
+        public List<string> ImageUrls { get; set; } = new List<string>();
+
         public string Provenance { get; set; }
         public string Winner { get; set; }
         public int? SoldAmount { get; set; }

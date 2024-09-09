@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getDetailedView, editAuction } from "@/app/actions/auctionActions";
+import { addImage } from "@/app/actions/imageActions";
 import Form from "@/app/components/Form";
 
 function Edit({ params }) {
@@ -12,13 +13,16 @@ function Edit({ params }) {
     title: "",
     auctionStart: "",
     auctionEnd: "",
-    imageUrl: "",
     description: "",
+    imageUrl: "",
+    bannerUrl: "",
   });
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+  const [thumbnail, setThumbnail] = useState(null);
+  const [banner, setBanner] = useState(null);
 
   const auctionFields = [
     {
@@ -34,16 +38,22 @@ function Edit({ params }) {
     },
     { name: "auctionEnd", label: "Auction End Date", type: "datetime-local" },
     {
-      name: "imageUrl",
-      label: "Image URL",
-      type: "text",
-      placeholder: "http://example.com/image.jpg",
-    },
-    {
       name: "description",
       label: "Description",
       type: "textarea",
       placeholder: "Detailed description of the auction",
+    },
+    {
+      name: "imageUrl",
+      label: "Thumbnail",
+      type: "file",
+      placeholder: "",
+    },
+    {
+      name: "bannerUrl",
+      label: "Banner",
+      type: "file",
+      placeholder: "",
     },
   ];
 
@@ -58,9 +68,12 @@ function Edit({ params }) {
               .toISOString()
               .slice(0, 16),
             auctionEnd: new Date(data.auctionEnd).toISOString().slice(0, 16),
-            imageUrl: data.imageUrl,
             description: data.description,
+            imageUrl: data.imageUrl || "",
+            bannerUrl: data.bannerUrl || "",
           });
+          setThumbnail(data.imageUrl);
+          setBanner(data.bannerUrl);
         } else {
           setError("Failed to load auction details");
         }
@@ -75,9 +88,50 @@ function Edit({ params }) {
     fetchAuction();
   }, [auctionId]);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setAuction((prev) => ({ ...prev, [name]: value }));
+  const handleChange = async (event) => {
+    const { name, type, files } = event.target;
+
+    if (type === "file") {
+      if (files.length > 0) {
+        // Check if a file is actually selected
+        const file = files[0];
+        const reader = new FileReader();
+
+        reader.onloadend = () => {
+          if (name === "imageUrl") {
+            setThumbnail(reader.result);
+          } else if (name === "bannerUrl") {
+            setBanner(reader.result);
+          }
+        };
+        reader.readAsDataURL(file);
+
+        try {
+          const imageType = name === "imageUrl" ? "thumbnail" : "banner";
+          const uploadResponse = await addImage(file, auctionId, imageType);
+          if (uploadResponse.error) {
+            console.error("Image upload failed:", uploadResponse.error);
+            setError(uploadResponse.error.message);
+          } else {
+            if (name === "imageUrl") {
+              setThumbnail(uploadResponse.url);
+              setAuction((prev) => ({ ...prev, imageUrl: uploadResponse.url }));
+            } else if (name === "bannerUrl") {
+              setBanner(uploadResponse.url);
+              setAuction((prev) => ({
+                ...prev,
+                bannerUrl: uploadResponse.url,
+              }));
+            }
+          }
+        } catch (err) {
+          console.error("Error during image upload:", err);
+          setError("Error uploading image");
+        }
+      }
+    } else {
+      setAuction((prev) => ({ ...prev, [name]: event.target.value }));
+    }
   };
 
   async function handleSubmit(event) {
@@ -132,6 +186,9 @@ function Edit({ params }) {
           values={auction}
           onChange={handleChange}
           onSubmit={handleSubmit}
+          isEditMode={true}
+          imageUrl={thumbnail}
+          bannerUrl={banner}
         />
       )}
     </div>

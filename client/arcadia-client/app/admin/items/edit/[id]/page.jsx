@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { getDetailedView, editItems } from "@/app/actions/itemActions"; // Import both functions
-import Form from "@/app/components/Form";
+import Form from "@/app/components/admin/ItemForm";
 import { useRouter } from "next/navigation";
 
 function EditItem({ params }) {
@@ -19,6 +19,7 @@ function EditItem({ params }) {
     auctionId: "",
   });
 
+  const [galleryImages, setGalleryImages] = useState([]); // Store the gallery images
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
@@ -29,6 +30,9 @@ function EditItem({ params }) {
       try {
         const fetchedItem = await getDetailedView(params.id);
         setItem(fetchedItem); // Prefill the form with existing item data
+        if (fetchedItem.gallery && fetchedItem.gallery.length > 0) {
+          setGalleryImages(fetchedItem.gallery); // Set gallery images if available
+        }
       } catch (err) {
         console.error("Error fetching item details:", err);
         setError("Failed to fetch item details.");
@@ -40,14 +44,48 @@ function EditItem({ params }) {
 
   const itemFields = [
     { name: "title", label: "Title", type: "text", placeholder: "Item Title" },
-    { name: "description", label: "Description", type: "textarea", placeholder: "Detailed description of the item" },
-    { name: "dimensions", label: "Dimensions", type: "text", placeholder: "Item dimensions (e.g., 40 mm diameter)" },
-    { name: "materials", label: "Materials", type: "text", placeholder: "Materials (e.g., Stainless steel)" },
-    { name: "conditionReport", label: "Condition Report", type: "text", placeholder: "Condition report (e.g., Excellent condition)" },
-    { name: "artistOrMaker", label: "Artist or Maker", type: "text", placeholder: "Artist or Maker (e.g., Rolex)" },
-    { name: "yearOfCreation", label: "Year of Creation", type: "number", placeholder: "Year of creation (e.g., 2022)" },
-    { name: "imageUrl", label: "Image URL", type: "text", placeholder: "http://example.com/image.jpg" },
-    { name: "provenance", label: "Provenance", type: "text", placeholder: "Provenance (e.g., Acquired from a private collection)" },
+    {
+      name: "description",
+      label: "Description",
+      type: "textarea",
+      placeholder: "Detailed description of the item",
+    },
+    {
+      name: "dimensions",
+      label: "Dimensions",
+      type: "text",
+      placeholder: "Item dimensions (e.g., 40 mm diameter)",
+    },
+    {
+      name: "materials",
+      label: "Materials",
+      type: "text",
+      placeholder: "Materials (e.g., Stainless steel)",
+    },
+    {
+      name: "conditionReport",
+      label: "Condition Report",
+      type: "text",
+      placeholder: "Condition report (e.g., Excellent condition)",
+    },
+    {
+      name: "artistOrMaker",
+      label: "Artist or Maker",
+      type: "text",
+      placeholder: "Artist or Maker (e.g., Rolex)",
+    },
+    {
+      name: "yearOfCreation",
+      label: "Year of Creation",
+      type: "number",
+      placeholder: "Year of creation (e.g., 2022)",
+    },
+    {
+      name: "provenance",
+      label: "Provenance",
+      type: "text",
+      placeholder: "Provenance (e.g., Acquired from a private collection)",
+    },
   ];
 
   const handleChange = (event) => {
@@ -62,7 +100,7 @@ function EditItem({ params }) {
     setSuccess(null);
 
     try {
-      const response = await editItems(item); // Call editItems with updated item data
+      const response = await editItems(item);
       if (response.error) {
         setError(response.error.message);
       } else {
@@ -93,12 +131,15 @@ function EditItem({ params }) {
           <p className="text-center font-medium">{success}</p>
         </div>
       )}
+
       <Form
         title={`Edit Item: ${item.title}`}
         fields={itemFields}
         values={item}
         onChange={handleChange}
         onSubmit={handleSubmit}
+        galleryImages={galleryImages}
+        isEditMode={true}
       />
     </div>
   );

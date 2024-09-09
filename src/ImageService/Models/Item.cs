@@ -1,7 +1,8 @@
-﻿namespace ImageService.Models
+﻿using MongoDB.Entities;
+
+namespace ImageService.Models
 {
-    public class Item
+    public class Item: Entity
     {
-        public Guid Id { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace AuctionService.DTOs.Auction
         public DateTime AuctionEnd { get; set; }
         public Status Status { get; set; }
         public string ImageUrl { get; set; }
+        public string BannerUrl { get; set; }
         public string Description { get; set; }
 
         public List<ItemDto> Items { get; set; } = new List<ItemDto>();

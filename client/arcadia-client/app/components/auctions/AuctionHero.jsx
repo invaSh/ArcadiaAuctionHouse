@@ -13,12 +13,15 @@ export default function AuctionHero({ auction }) {
     return date.toLocaleTimeString("en-US", timeOptions);
   };
 
+  console.log(auction);
+  
+
   return (
     <div
       className="h-[70vh] w-[100%] text-white px-12 flex flex-col justify-between  tracking-widest"
       style={{
         backgroundImage:
-          "url('https://www.wright20.com/files/media/session/2100/header/2000x1333header366indexmg_1722533002.jpg?size=1800')",
+          `url(${auction.bannerUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

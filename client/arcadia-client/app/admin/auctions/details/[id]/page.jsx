@@ -4,6 +4,8 @@ import Link from "next/link";
 
 async function Details({ params }) {
   const auction = await getDetailedView(params.id);
+  console.log(auction);
+  
   function getStatusClass(status) {
     switch (status) {
       case 0:
@@ -51,14 +53,20 @@ async function Details({ params }) {
               </dd>
             </div>
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">Thumbnail</dt>
-              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              <dt className="text-sm font-medium text-gray-500">Thumbnail & Banner</dt>
+              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 flex gap-3">
                 <img
                   src={auction.imageUrl}
                   alt={`Image of ${auction.title}`}
                   className="w-full sm:max-w-xs"
                 />
+                <img
+                  src={auction.bannerUrl}
+                  alt={`Image of ${auction.title}`}
+                  className="w-full sm:max-w-xs"
+                />
               </dd>
+
             </div>
             <div className="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Status</dt>

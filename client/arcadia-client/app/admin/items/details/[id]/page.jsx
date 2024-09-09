@@ -6,6 +6,9 @@ import Link from "next/link";
 
 async function Details({ params }) {
   const item = await getDetailedView(params.id);
+
+  console.log(item);
+
   const bids = await getBids(params.id);
   const auction = await getAuction(item.auctionId);
   function getStatusClass(status) {
@@ -90,15 +93,40 @@ async function Details({ params }) {
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">
+                Item gallery
+              </dt>
+              <dd
+                className={`mt-1 text-xl text-white sm:mt-0 sm:col-span-2 rounded-md flex gap-3`}
+              >
+                {item.imageUrls && item.imageUrls.length > 0 ? (
+                  item.imageUrls.map((url, index) => (
+                    <div key={index} className="w-48 h-48">
+                      <img
+                        src={url}
+                        alt={`Gallery image ${index + 1}`}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <p>No gallery images available.</p>
+                )}
+              </dd>
+            </div>
+            <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500"># of bids</dt>
               <dd className="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2">
                 <div className="flex gap-5">
                   <span className="p-2">{bids.length}</span>
-                  <span className="bg-gray-50 p-2">Current highest bid: ${item.currentHighBid}</span>
+                  <span className="bg-gray-50 p-2">
+                    Current highest bid: ${item.currentHighBid}
+                  </span>
                 </div>
               </dd>
             </div>
-            <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+
+            <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">
                 Auction status
               </dt>

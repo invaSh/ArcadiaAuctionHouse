@@ -7,9 +7,8 @@ import LiveAuctionCard from "./components/auctions/LiveAuctionCard";
 import RegisterBanner from "./components/RegisterBanner";
 
 export default async function Home() {
-  const upcomingAuctions = await getUpcomingAuctions();
-  console.log("auc-------",upcomingAuctions);
-  upcomingAuctions.slice(0, 5);
+  let upcomingAuctions = await getUpcomingAuctions();
+  upcomingAuctions = upcomingAuctions.slice(0, 5);
 
   const auctions = (await getAllAuctions()).auctions;
   const liveAuctions = auctions.filter(auction => auction.status === 0);

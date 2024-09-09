@@ -4,14 +4,13 @@ import PlaceBidForm from "@/app/components/items/PlaceBidForm";
 import { getHighestBid } from "@/app/actions/bidActions";
 import { getSession } from "@/app/actions/authActions";
 import Link from "next/link";
-
+import ImageGalleryModal from "@/app/components/ImageGalleryModal";
 async function Details({ params }) {
   const item = await getDetailedView(params.id);
   const bid = await getHighestBid(params.id);
   const user = await getSession();
   const today = new Date();
-
-  console.log("--->", user);
+  const itemImageUrls = item.imageUrls;
 
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = today.toLocaleDateString("en-US", options);
@@ -32,26 +31,7 @@ async function Details({ params }) {
               {formattedDate}
             </h1>
             <div className="w-full grid grid-cols-2 gap-3 py-12">
-              <img
-                className="col-span-1 img-hover"
-                src="https://www.wright20.com/items/index/600/114_1_editions_works_on_paper_august_2024_roy_lichtenstein_yellow_still_life_from_the_six_still_lives_series__wright_auction.jpg?t=1722271378"
-                alt=""
-              />
-              <img
-                className="col-span-1 img-hover"
-                src="https://www.wright20.com/items/index/600/114_1_editions_works_on_paper_august_2024_roy_lichtenstein_yellow_still_life_from_the_six_still_lives_series__wright_auction.jpg?t=1722271378"
-                alt=""
-              />
-              <img
-                className="col-span-1 img-hover"
-                src="https://www.wright20.com/items/index/600/114_1_editions_works_on_paper_august_2024_roy_lichtenstein_yellow_still_life_from_the_six_still_lives_series__wright_auction.jpg?t=1722271378"
-                alt=""
-              />
-              <img
-                className="col-span-1 img-hover"
-                src="https://www.wright20.com/items/index/600/114_1_editions_works_on_paper_august_2024_roy_lichtenstein_yellow_still_life_from_the_six_still_lives_series__wright_auction.jpg?t=1722271378"
-                alt=""
-              />
+              <ImageGalleryModal imageUrls={itemImageUrls} />
             </div>
           </div>
           <div className="col-span-4">
@@ -108,7 +88,6 @@ async function Details({ params }) {
                 </p>
               </div>
             </div>
-            <div className="border-b border-gray-300 py-10 text-center"></div>
             <div className="border-b border-gray-300 py-10 text-center">
               <div className="flex justify-center gap-5">
                 <p>
