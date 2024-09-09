@@ -19,17 +19,18 @@ namespace SearchService.Controller
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                var keywords = searchTerm.Split(' ');
+                // Convert the search term to lowercase
+                var lowerCaseSearchTerm = searchTerm.ToLower();
 
                 var itemsResult = await itemQuery.Match(i =>
-                               i.ArtistOrMaker.Contains(searchTerm) ||
-                               i.Title.Contains(searchTerm) ||
-                               i.Description.Contains(searchTerm))
+                               i.ArtistOrMaker.ToLower().Contains(lowerCaseSearchTerm) ||
+                               i.Title.ToLower().Contains(lowerCaseSearchTerm) ||
+                               i.Description.ToLower().Contains(lowerCaseSearchTerm))
                 .ExecuteAsync();
 
                 var auctionsResult = await auctionQuery.Match(a =>
-                                  a.Seller.Contains(searchTerm) ||
-                                  a.Title.Contains(searchTerm))
+                                  a.Seller.ToLower().Contains(lowerCaseSearchTerm) ||
+                                  a.Title.ToLower().Contains(lowerCaseSearchTerm))
                 .ExecuteAsync();
 
                 if (auctionsResult.Count == 0) Console.WriteLine("---->auctions is coming back empty");
@@ -42,6 +43,7 @@ namespace SearchService.Controller
                     Auctions = auctionsResult
                 });
             }
+
 
             var itemResult = await itemQuery.ExecuteAsync();
             var auctionResult = await auctionQuery.ExecuteAsync();

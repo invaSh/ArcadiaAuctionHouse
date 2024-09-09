@@ -3,6 +3,7 @@ import Link from "next/link";
 import LoginButton from "./LoginButton";
 import { getSession } from "@/app/actions/authActions";
 import UserActions from "./UserActions";
+import Search from "./Search";
 
 async function Navbar() {
   const session = await getSession();
@@ -38,7 +39,7 @@ async function Navbar() {
         </ul>
         {session?.user ? <UserActions user={session.user} /> : <LoginButton />}
       </div>
-      {/* <Search /> */}
+      <Search />
     </header>
   );
 }
