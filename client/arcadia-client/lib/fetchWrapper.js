@@ -43,6 +43,7 @@ async function put(url, body) {
     headers: await getHeaders(),
     body: JSON.stringify(body),
   };
+
   const response = await fetch(baseUrl + url, requestOptions);
   return await handleResponse(response);
 }

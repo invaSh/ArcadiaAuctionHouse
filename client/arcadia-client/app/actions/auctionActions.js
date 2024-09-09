@@ -19,3 +19,14 @@ export async function getAllAuctions(){
 export async function getUpcomingAuctions(){
     return await fetchWrapper.get("auctions/upcoming")
 }
+
+export async function updateBanner(id, auctionId) {
+    const body = { auctionId };
+  
+    return await fetchWrapper.put(`auctions/update-banner/${id}`, body);
+  }
+
+
+  export async function getAllBanners(){
+    return await fetchWrapper.get("auctions/update-banner")
+}

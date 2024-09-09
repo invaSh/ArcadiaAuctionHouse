@@ -15,7 +15,6 @@ import {
   FaUser,
   FaGavel,
   FaBox,
-  FaDollarSign,
   FaBookOpen,
   FaChevronDown,
   FaAngleRight,
@@ -23,6 +22,7 @@ import {
   FaPowerOff,
 } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
+import { FaWandSparkles } from "react-icons/fa6";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 
@@ -101,17 +101,18 @@ export default function Navbar() {
           </ListItemPrefix>
           <Link href={`/admin/bids/list`}>Bids</Link>
         </ListItem>
-        <ListItem>
-          <ListItemPrefix>
-            <FaDollarSign className="h-5 w-5 mr-2" />
-          </ListItemPrefix>
-          Payments
-        </ListItem>
+
         <ListItem>
           <ListItemPrefix>
             <FaBookOpen className="h-5 w-5 mr-2" />
           </ListItemPrefix>
           Stories
+        </ListItem>
+        <ListItem>
+          <ListItemPrefix>
+            <FaWandSparkles className="h-5 w-5 mr-2" />
+          </ListItemPrefix>
+          <Link href={`/admin/banner-manager`}>Banner Manager</Link>
         </ListItem>
         <ListItem>
           <ListItemPrefix>

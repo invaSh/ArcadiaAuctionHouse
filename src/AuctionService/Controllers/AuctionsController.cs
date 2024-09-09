@@ -1,4 +1,5 @@
 ﻿using AuctionService.Data;
+using AuctionService.DTOs;
 using AuctionService.DTOs.Auction;
 using AuctionService.DTOs.Item;
 using AuctionService.Models;
@@ -48,12 +49,12 @@ namespace AuctionService.Controllers
         public async Task<ActionResult<AuctionDto>> GetAuction(Guid id)
         {
             var auction = await _context.Auctions
-                .Include(x=> x.Items)
+                .Include(x => x.Items)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if (auction == null) return NotFound();
 
-            return _mapper.Map<AuctionDto>(auction);  
+            return _mapper.Map<AuctionDto>(auction);
 
         }
 
@@ -74,11 +75,11 @@ namespace AuctionService.Controllers
             auction.Seller = username;
             auctionDto.Seller = username;
 
-            if (auctionDto.AuctionStart > DateTime.UtcNow) 
-            { 
-            
+            if (auctionDto.AuctionStart > DateTime.UtcNow)
+            {
+
                 auction.Status = Status.HasNotStarted;
-            } 
+            }
             else if (auctionDto.AuctionEnd <= auctionDto.AuctionStart)
             {
                 return BadRequest("The auction end time must be later than the start time.");
@@ -94,7 +95,7 @@ namespace AuctionService.Controllers
             if (!result) return BadRequest("Could not save changes");
 
             return CreatedAtAction(nameof(GetAuction), new { auction.Id }, auction);
-        
+
         }
 
         [Authorize]
@@ -106,7 +107,7 @@ namespace AuctionService.Controllers
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if (auction == null) return NotFound();
-            if(auction.Seller != User.Identity.Name) return Forbid();
+            if (auction.Seller != User.Identity.Name) return Forbid();
 
             auction.Title = auctionDto.Title;
             auction.AuctionStart = auctionDto.AuctionStart;
@@ -148,7 +149,7 @@ namespace AuctionService.Controllers
             }
 
             var itemDetachResult = await _context.SaveChangesAsync();
-           
+
             _context.Auctions.Remove(auction);
 
             Console.WriteLine($"---------------------------------------------------------------> Publishing deleted item {auction.Id}");
@@ -180,6 +181,38 @@ namespace AuctionService.Controllers
 
             return Ok(upcomingAuctions);
         }
+
+
+        [HttpPut("update-banner/{id}")]
+        public async Task<ActionResult<AuctionBanner>> UpdateBanner(int id, BannerDTO banner)
+        {
+            Console.WriteLine($"============================================================================>Received auctionId: {banner.AuctionId}");
+
+            var newBanner = await _context.AuctionBanners.FirstOrDefaultAsync(b => b.Id == id);
+            if (newBanner == null)
+            {
+                return NotFound();
+            }
+
+            newBanner.AuctionId = banner.AuctionId;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(newBanner);
+        }
+
+
+        [HttpGet("update-banner")]
+        public async Task<ActionResult> GetBanners()
+        {
+            var banners = await _context.AuctionBanners
+                .OrderBy(b => b.Id)
+                .ToListAsync();
+
+            return Ok(banners);
+        }
+
+
 
     }
 }

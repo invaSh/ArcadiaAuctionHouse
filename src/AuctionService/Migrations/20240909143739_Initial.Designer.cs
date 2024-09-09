@@ -13,8 +13,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AuctionService.Migrations
 {
     [DbContext(typeof(AuctionDbContext))]
-    [Migration("20240908174346_ItemImages")]
-    partial class ItemImages
+    [Migration("20240909143739_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,6 +65,22 @@ namespace AuctionService.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Auctions");
+                });
+
+            modelBuilder.Entity("AuctionService.Models.AuctionBanner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<Guid?>("AuctionId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuctionBanners");
                 });
 
             modelBuilder.Entity("AuctionService.Models.Item", b =>

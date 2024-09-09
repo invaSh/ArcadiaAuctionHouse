@@ -64,6 +64,22 @@ namespace AuctionService.Migrations
                     b.ToTable("Auctions");
                 });
 
+            modelBuilder.Entity("AuctionService.Models.AuctionBanner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<Guid?>("AuctionId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuctionBanners");
+                });
+
             modelBuilder.Entity("AuctionService.Models.Item", b =>
                 {
                     b.Property<Guid>("Id")

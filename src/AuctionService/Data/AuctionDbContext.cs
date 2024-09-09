@@ -10,6 +10,7 @@ namespace AuctionService.Data
         public AuctionDbContext(DbContextOptions options): base(options) { }
         public DbSet<Auction> Auctions { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<AuctionBanner> AuctionBanners { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

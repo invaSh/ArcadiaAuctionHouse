@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -7,11 +8,45 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AuctionService.Migrations
 {
     /// <inheritdoc />
-    public partial class Outbox : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "AuctionBanners",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    AuctionId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AuctionBanners", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Auctions",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Title = table.Column<string>(type: "text", nullable: true),
+                    Seller = table.Column<string>(type: "text", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    AuctionStart = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    AuctionEnd = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Status = table.Column<int>(type: "integer", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    BannerUrl = table.Column<string>(type: "text", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Auctions", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "InboxState",
                 columns: table => new
@@ -83,10 +118,47 @@ namespace AuctionService.Migrations
                     table.PrimaryKey("PK_OutboxState", x => x.OutboxId);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Items",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Title = table.Column<string>(type: "text", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    Dimensions = table.Column<string>(type: "text", nullable: true),
+                    Materials = table.Column<string>(type: "text", nullable: true),
+                    ConditionReport = table.Column<string>(type: "text", nullable: true),
+                    ArtistOrMaker = table.Column<string>(type: "text", nullable: true),
+                    YearOfCreation = table.Column<int>(type: "integer", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    Provenance = table.Column<string>(type: "text", nullable: true),
+                    ReservePrice = table.Column<int>(type: "integer", nullable: true),
+                    ImageUrls = table.Column<List<string>>(type: "text[]", nullable: true),
+                    Winner = table.Column<string>(type: "text", nullable: true),
+                    SoldAmount = table.Column<int>(type: "integer", nullable: true),
+                    CurrentHighBid = table.Column<int>(type: "integer", nullable: true),
+                    Sold = table.Column<bool>(type: "boolean", nullable: false),
+                    AuctionId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Items", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Items_Auctions_AuctionId",
+                        column: x => x.AuctionId,
+                        principalTable: "Auctions",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_InboxState_Delivered",
                 table: "InboxState",
                 column: "Delivered");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_AuctionId",
+                table: "Items",
+                column: "AuctionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OutboxMessage_EnqueueTime",
@@ -120,13 +192,22 @@ namespace AuctionService.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AuctionBanners");
+
+            migrationBuilder.DropTable(
                 name: "InboxState");
+
+            migrationBuilder.DropTable(
+                name: "Items");
 
             migrationBuilder.DropTable(
                 name: "OutboxMessage");
 
             migrationBuilder.DropTable(
                 name: "OutboxState");
+
+            migrationBuilder.DropTable(
+                name: "Auctions");
         }
     }
 }
