@@ -1,9 +1,20 @@
 using MassTransit;
+using Microsoft.EntityFrameworkCore;
 using NotificationService.Consumers;
+using NotificationService.Data;
 using NotificationService.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
+builder.Services.AddDbContext<NotifyDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 builder.Services.AddMassTransit(x =>
 {
@@ -27,7 +38,10 @@ builder.Services.AddSignalR();
 
 
 var app = builder.Build();
+app.UseAuthentication();
+app.UseAuthorization();
 
+app.MapControllers();
 
 app.MapHub<NotificationHub>("/notifications");
 

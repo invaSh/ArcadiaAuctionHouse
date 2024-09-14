@@ -111,12 +111,15 @@ namespace AuctionService.Controllers
 
             auction.Title = auctionDto.Title;
             auction.AuctionStart = auctionDto.AuctionStart;
-            auction.AuctionEnd = auctionDto.AuctionEnd;
             auction.UpdatedAt = DateTime.UtcNow;
             auction.ImageUrl = auctionDto.ImageUrl;
             auction.Description = auctionDto.Description;
-
-            Console.WriteLine("-------------------------------------->Updating auction with ID: " + auction.Id);
+            auction.TotalRevenue = auctionDto.TotalRevenue;
+            auction.AuctionEnd = auctionDto.AuctionEnd;
+            if(auction.AuctionEnd >= DateTime.UtcNow)
+            {
+                auction.Status = Status.Live;
+            }
 
             await _publishEndpoint.Publish(_mapper.Map<AuctionUpdated>(auctionDto));
 

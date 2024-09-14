@@ -17,3 +17,6 @@ export async function getHighestBid(id){
     return fetchWrapper.get(`bids/highest/${id}`)
 }
 
+export async function getWeeklyBids(){
+    return fetchWrapper.get(`bids/weekly`)
+}

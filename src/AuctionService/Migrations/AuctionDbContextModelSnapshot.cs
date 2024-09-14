@@ -56,6 +56,9 @@ namespace AuctionService.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
+                    b.Property<int>("TotalRevenue")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -127,6 +130,9 @@ namespace AuctionService.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("text");
+
+                    b.Property<int?>("Views")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Winner")
                         .HasColumnType("text");

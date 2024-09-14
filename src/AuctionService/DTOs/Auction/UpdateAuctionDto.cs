@@ -12,6 +12,7 @@ namespace AuctionService.DTOs.Auction
         public string Status { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
+        public int TotalRevenue { get; set; }
 
         public List<UpdateItemDto> Items { get; set; } = new List<UpdateItemDto>();
     }

@@ -37,7 +37,7 @@ namespace BiddingService.Services
         {
             var finishedAuctions = await DB.Find<Auction>()
                 .Match(x => x.AuctionEnd <= DateTime.UtcNow)
-                .Match(x => !x.Finished)
+                .Match(x => x.Status != "Finished")
                 .ExecuteAsync(stoppingToken);
 
             if (finishedAuctions.Count == 0) return;
@@ -49,12 +49,17 @@ namespace BiddingService.Services
 
             foreach (var auction in finishedAuctions)
             {
+                if(auction.Items.Count == 0) Console.WriteLine("=====>no items found");
+
                 foreach (var item in auction.Items)
                 {
                     var highestBid = await DB.Find<Bid>()
                         .Match(b => b.ItemId == Guid.Parse(item.ID))
                         .Sort(b => b.Descending(b => b.Amount))
                         .ExecuteFirstAsync(stoppingToken);
+
+                    _logger.LogInformation("==> This is the highest bid: " + highestBid);
+
 
                     if (highestBid != null && highestBid.Amount >= item.ReservePrice)
                     {
@@ -77,6 +82,7 @@ namespace BiddingService.Services
                     }
                     else
                     {
+                        Console.WriteLine("===>ka hi n else block");
                         var itemSold = new ItemSold
                         {
                             Id = item.ID.ToString(),
@@ -94,7 +100,6 @@ namespace BiddingService.Services
                     await item.SaveAsync(null, stoppingToken); 
                 }
 
-                auction.Finished = true;
                 auction.Status = "Finished";
                 await auction.SaveAsync(null, stoppingToken);
 

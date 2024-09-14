@@ -3,17 +3,19 @@ import React from "react";
 import PlaceBidForm from "@/app/components/items/PlaceBidForm";
 import { getHighestBid } from "@/app/actions/bidActions";
 import { getSession } from "@/app/actions/authActions";
-import Link from "next/link";
 import ImageGalleryModal from "@/app/components/ImageGalleryModal";
+import { incrementViewCount } from "@/app/actions/dashboardActions";
+
 async function Details({ params }) {
   const item = await getDetailedView(params.id);
   const bid = await getHighestBid(params.id);
   const user = await getSession();
   const today = new Date();
   const itemImageUrls = item.imageUrls;
-
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = today.toLocaleDateString("en-US", options);
+
+  await incrementViewCount(params.id);
 
   return (
     <>

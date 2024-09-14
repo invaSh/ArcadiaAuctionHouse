@@ -9,7 +9,6 @@ namespace BiddingService.Models
         public DateTime AuctionEnd { get; set; } 
         public string Status { get; set; }  
         public bool Finished { get; set; } 
-
         public List<Item> Items { get; set; } = new List<Item>();
     }
 }

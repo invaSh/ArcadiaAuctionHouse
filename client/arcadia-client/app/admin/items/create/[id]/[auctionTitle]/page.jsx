@@ -73,6 +73,12 @@ function CreateItem({ params }) {
       type: "text",
       placeholder: "Provenance (e.g., Acquired from a private collection)",
     },
+    {
+      name: "reservePrice",
+      label: "Reserve Price",
+      type: "number",
+      placeholder: "Reserve Price (e.g., 10000)",
+    },
     { name: "imageUrl", label: "Thumbnail", type: "file", placeholder: "" },
   ];
 

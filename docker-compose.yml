@@ -104,6 +104,7 @@ services:
         ports:
             - 7004:80
         depends_on:
+            - postgres
             - rabbitmq
     image-svc:
         image: invaSh/image-svc:latest

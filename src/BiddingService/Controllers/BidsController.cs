@@ -6,6 +6,8 @@ using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using MongoDB.Entities;
 
 namespace BiddingService.Controllers
@@ -120,6 +122,43 @@ namespace BiddingService.Controllers
 
             return Ok(_mapper.Map<BidDto>(highestBid));
         }
+
+        [HttpGet("weekly")]
+        public async Task<ActionResult> GetWeeklyBidActivity()
+        {
+            var endDate = DateTime.UtcNow;
+            var startDate = endDate.AddDays(-7);
+
+            var bids = await DB.Find<Bid>()
+                .Match(b => b.BidTime >= startDate && b.BidTime <= endDate)
+                .ExecuteAsync();
+
+            var bidCountsPerDay = new Dictionary<string, int>();
+
+            foreach (var bid in bids)
+            {
+                var dayKey = bid.BidTime.ToString("yyyy-MM-dd");
+                if (bidCountsPerDay.ContainsKey(dayKey))
+                {
+                    bidCountsPerDay[dayKey]++;
+                }
+                else
+                {
+                    bidCountsPerDay[dayKey] = 1;
+                }
+            }
+
+            var result = bidCountsPerDay.Select(kvp => new
+            {
+                Date = kvp.Key,
+                Count = kvp.Value
+            }).OrderBy(x => x.Date).ToList();
+
+            return Ok(result);
+        }
+
+
+
     }
 }
                                                         

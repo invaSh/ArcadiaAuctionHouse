@@ -4,7 +4,7 @@ import Table from "@/app/components/admin/BidsTable";
 
 export default async function List() {
   const bids = await getAllBids();
-  const head = ["Bidder", "Item Id", "Bid Amount", "Bid Status", ""];
+  const head = ["Bidder", "Item Id", "Bid Amount", "Item Status", "Item details"];
   console.log(bids);
 
   return (
