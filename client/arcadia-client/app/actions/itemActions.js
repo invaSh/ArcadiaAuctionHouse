@@ -7,6 +7,9 @@ export async function getItems() {
 export async function getDetailedView(id) {
   return await fetchWrapper.get(`items/${id}`);
 }
+export async function deleteItem(id) {
+  return await fetchWrapper.del(`items/${id}`);
+}
 
 export async function createItems(data) {
   return await fetchWrapper.post("items", data);

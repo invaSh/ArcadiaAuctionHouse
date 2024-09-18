@@ -1,6 +1,7 @@
 import React from "react";
 import { getUserDetails } from "@/app/actions/userActions";
 import Link from "next/link";
+import DeleteButton from "@/app/components/admin/DeleteButton";
 
 async function UserDetails({ params }) {
   const user = await getUserDetails(params.id);
@@ -61,6 +62,13 @@ async function UserDetails({ params }) {
         >
           Edit User
         </Link>
+      </div>
+      <div className="flex justify-center space-x-4 mt-8">
+        <DeleteButton
+          id={params.id}
+          entityName="User"
+          redirectUrl="/admin/users/list"
+        />
       </div>
     </div>
   );

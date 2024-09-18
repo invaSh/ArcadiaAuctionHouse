@@ -1,5 +1,6 @@
 import React from "react";
 import { getDetailedView } from "@/app/actions/auctionActions";
+import Link from "next/link";
 
 export default async function ItemsList({ params }) {
   const auction = await getDetailedView(params.id);
@@ -17,7 +18,7 @@ export default async function ItemsList({ params }) {
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="w-full h-32 object-cover mt-2 rounded"
+                className="w-full h-32 object-cover mt-2 mb-5 rounded"
               />
               <h2 className="text-xl font-semibold">{item.title}</h2>
               <div className="truncate-container">
@@ -37,23 +38,14 @@ export default async function ItemsList({ params }) {
               <p className="text-sm text-gray-500">
                 Artist or Maker: {item.artistOrMaker}
               </p>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm text-gray-500">
                 Provenance: {item.provenance}
               </p>
-              <div className="mt-4 flex space-x-2">
-                {/* Button for removing the item from auction */}
-                <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">
-                  Remove from Auction
-                </button>
-                {/* Button for hiding the item */}
-                <button className="bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded">
-                  Hide
-                </button>
-                {/* Button for deleting the item */}
-                <button className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded">
-                  Delete
-                </button>
-              </div>
+              <p className="text-sm mt-2 text-hover">
+                <Link href={`/admin/items/details/${item.id}`}>
+                <u>View Details</u>
+                </Link>
+              </p>
             </div>
           ))}
         </div>

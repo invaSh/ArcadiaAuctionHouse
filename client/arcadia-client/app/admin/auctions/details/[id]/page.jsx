@@ -1,11 +1,11 @@
 import React from "react";
 import { getDetailedView } from "@/app/actions/auctionActions";
 import Link from "next/link";
+import DeleteButton from "@/app/components/admin/DeleteButton";
 
 async function Details({ params }) {
   const auction = await getDetailedView(params.id);
-  console.log(auction);
-  
+
   function getStatusClass(status) {
     switch (status) {
       case 0:
@@ -18,6 +18,7 @@ async function Details({ params }) {
         return "bg-gray-600"; // Gray for unspecified or other statuses
     }
   }
+
   return (
     <div className="container mx-auto px-4 py-8 font-syne">
       <div className="bg-white shadow overflow-hidden sm:rounded-lg">
@@ -53,7 +54,9 @@ async function Details({ params }) {
               </dd>
             </div>
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">Thumbnail & Banner</dt>
+              <dt className="text-sm font-medium text-gray-500">
+                Thumbnail & Banner
+              </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 flex gap-3">
                 <img
                   src={auction.imageUrl}
@@ -66,7 +69,6 @@ async function Details({ params }) {
                   className="w-full sm:max-w-xs"
                 />
               </dd>
-
             </div>
             <div className="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Status</dt>
@@ -92,9 +94,9 @@ async function Details({ params }) {
               <dt className="text-sm font-medium text-gray-500"># of items</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 {auction.items.length}
-                <span className="ml-12 mt-12 text-hover">
+                <span className="ml-12 text-hover">
                   <a href={`/admin/auctions/items-list/${auction.id}`}>
-                    View Auctions
+                    <u>View Items</u>
                   </a>
                 </span>
               </dd>
@@ -115,6 +117,13 @@ async function Details({ params }) {
         >
           Add Items to Auction
         </Link>
+      </div>
+      <div className="flex justify-center space-x-4 mt-8">
+        <DeleteButton
+          id={params.id}
+          entityName="Auction"
+          redirectUrl="/admin/auctions/list"
+        />
       </div>
     </div>
   );

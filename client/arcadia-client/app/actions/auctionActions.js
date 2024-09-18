@@ -11,6 +11,10 @@ export async function getDetailedView(id) {
   return await fetchWrapper.get(`auctions/${id}`);
 }
 
+export async function deleteAuction(id) {
+  return await fetchWrapper.del(`auctions/${id}`);
+}
+
 export async function getAllAuctions() {
   return await fetchWrapper.get("auctions");
 }

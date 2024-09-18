@@ -2,6 +2,8 @@ import React from "react";
 import { getDetailedView } from "@/app/actions/itemActions";
 import { getBids } from "@/app/actions/bidActions";
 import { getDetailedView as getAuction } from "@/app/actions/auctionActions";
+import DeleteButton from "@/app/components/admin/DeleteButton";
+
 import Link from "next/link";
 
 async function Details({ params }) {
@@ -164,6 +166,13 @@ async function Details({ params }) {
         >
           Back to Auction
         </Link>
+      </div>
+      <div className="flex justify-center space-x-4 mt-8">
+        <DeleteButton
+          id={params.id}
+          entityName="Item"
+          redirectUrl="/admin/items/list"
+        />
       </div>
     </div>
   );

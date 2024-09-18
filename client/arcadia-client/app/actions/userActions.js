@@ -10,6 +10,9 @@ export async function getUserDetails (id){
     return await fetchWrapper.get(`users/${id}`)
 
 }
+export async function deleteUser (id){
+    return await fetchWrapper.del(`users/${id}`)
+}
 
 export async function editUser(id, data){
     return await fetchWrapper.put(`users/${id}`, data)
