@@ -19,7 +19,6 @@ namespace SearchService.Controller
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                // Convert the search term to lowercase
                 var lowerCaseSearchTerm = searchTerm.ToLower();
 
                 var itemsResult = await itemQuery.Match(i =>
@@ -58,6 +57,36 @@ namespace SearchService.Controller
                 Auctions = auctionResult
             });
         }
+
+        [HttpGet("{auctionId}/filter")]
+        public async Task<ActionResult> FilterItems(Guid auctionId, bool title = false, bool artistOrMaker = false, bool yearOfCreation = false)
+        {
+            
+            var query =  DB.Find<Item>()
+                .Match(i => i.AuctionId == auctionId);
+
+            var itemsList = await query.ExecuteAsync();
+
+
+            if (title)
+            {
+                itemsList = itemsList.OrderBy(i => i.Title).ToList();
+            }
+            if (artistOrMaker)
+            {
+                itemsList = itemsList.OrderBy(i => i.ArtistOrMaker).ToList();
+            }
+            if (yearOfCreation)
+            {
+                itemsList = itemsList.OrderBy(i => i.YearOfCreation).ToList();
+            }
+
+            return Ok(new
+            {     
+                Items = itemsList
+            });
+        }
+
 
     }
 }

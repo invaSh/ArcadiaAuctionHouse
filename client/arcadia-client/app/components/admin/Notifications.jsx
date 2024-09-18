@@ -8,7 +8,7 @@ function Notifications() {
   const [notifications, setNotifications] = useState([]);
   const [newNotifications, setNewNotifications] = useState([]);
   const [viewedNotifications, setViewedNotifications] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const connection = new signalR.HubConnectionBuilder()
@@ -51,7 +51,7 @@ function Notifications() {
       } catch (e) {
         console.error('--->Error fetching notifications', e);
       } finally {
-        setLoading(false); // Ensure loading is set to false regardless of success or failure
+        setLoading(false);
       }
     }
 
@@ -60,7 +60,7 @@ function Notifications() {
 
   async function handleClick(id) {
     try {
-      await viewedSet(id); // Pass the notification id
+      await viewedSet(id); 
       console.log('Notification marked as viewed');
     } catch (e) {
       console.error('---->Error marking notification as viewed', e);
@@ -117,7 +117,7 @@ function Notifications() {
                     <Link
                       href={`/admin/bids/list`}
                       className="text-hover"
-                      onClick={() => handleClick(notification.id)} // Use a function reference
+                      onClick={() => handleClick(notification.id)}
                     >
                       View more
                     </Link>
@@ -125,7 +125,7 @@ function Notifications() {
                     <Link
                       href={`/admin/auctions/list`}
                       className="text-hover"
-                      onClick={() => handleClick(notification.id)} // Use a function reference
+                      onClick={() => handleClick(notification.id)} 
                     >
                       View more
                     </Link>

@@ -29,6 +29,8 @@ namespace SearchService.Consumers.Items
             try
             {
                 var item = _mapper.Map<Item>(context.Message);
+                var auction = await DB.Find<Auction>().OneAsync(context.Message.AuctionId);
+
                 await item.SaveAsync();
                 Console.WriteLine("----> Item saved successfully");
             }
