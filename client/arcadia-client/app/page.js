@@ -8,6 +8,8 @@ import RegisterBanner from "./components/RegisterBanner";
 
 export default async function Home() {
   let upcomingAuctions = await getUpcomingAuctions();
+  console.log("===>", upcomingAuctions);
+  
   upcomingAuctions = upcomingAuctions.slice(0, 5);
 
   const auctions = (await getAllAuctions()).auctions;
@@ -34,10 +36,12 @@ export default async function Home() {
         <Browse
           subtitle={"FIND WHAT YOU LOVE"}
           title={"Browse all art and items"}
+          redirectLink="/user/auctions"
         />
         <Browse
-          subtitle={"NAMES TO KNOW"}
-          title={"Featured artists or makers"}
+          subtitle={"STORIES TO KNOW"}
+          title={"Read recent news and stories"}
+          redirectLink="/user/auctions"
         />
       </div>
 

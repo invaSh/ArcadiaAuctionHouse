@@ -10,6 +10,8 @@ export default async function List({ searchParams }) {
   const { paginatedAuctions, totalPages, currentPage } = await getPaginatedAuctions(page);
   const head = ["ID", "Title", "Seller", "Date Created", ""];
 
+  
+
   return (
     <div className="mt-12 font-syne">
       <h1 className="text-center text-5xl font-syne text-gray-500 ">

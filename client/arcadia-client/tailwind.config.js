@@ -17,8 +17,9 @@ module.exports = {
         body: ["EB Garamond"],
         syne: ["Syne"],
         bodoni: ["Bodoni Moda SC"],
-        playfair: ["Playfair Display"],
-        poppins: ["Poppins"]
+        playfair: ["Playfair Display SC"],
+        poppins: ["Poppins"],
+        alegreya : ["Alegreya"],
       }
     },
   },

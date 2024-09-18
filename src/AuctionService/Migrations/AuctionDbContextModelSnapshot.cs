@@ -50,6 +50,9 @@ namespace AuctionService.Migrations
                     b.Property<string>("Seller")
                         .HasColumnType("text");
 
+                    b.Property<string>("ShortDesc")
+                        .HasColumnType("text");
+
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 

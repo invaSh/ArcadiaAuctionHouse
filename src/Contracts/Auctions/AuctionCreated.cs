@@ -19,6 +19,8 @@ namespace Contracts.Auctions
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
+        public string ShortDesc { get; set; }
+
         public List<ItemCreated> Items { get; set; } = new List<ItemCreated>();
     }
 }

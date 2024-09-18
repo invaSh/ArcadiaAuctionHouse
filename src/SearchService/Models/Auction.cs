@@ -18,7 +18,8 @@ namespace SearchService.Models
         public string Status { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-        // Navigation property for the related items
+        public string ShortDesc { get; set; }
+
         public ICollection<Item> Items { get; set; } = new List<Item>();
     }
 }

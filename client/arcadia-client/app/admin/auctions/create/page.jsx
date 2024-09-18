@@ -34,6 +34,13 @@ function Create() {
     { name: "auctionEnd", label: "Auction End Date", type: "datetime-local" },
     { name: "imageUrl", label: "Thumbnail", type: "file", placeholder: "" },
     { name: "bannerUrl", label: "Banner", type: "file", placeholder: "" },
+    
+    {
+      name: "shortDesc",
+      label: "Short Description",
+      type: "textarea",
+      placeholder: "Short description of the auction",
+    },
     {
       name: "description",
       label: "Description",

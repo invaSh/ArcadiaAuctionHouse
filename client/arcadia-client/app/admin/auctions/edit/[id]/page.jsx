@@ -16,6 +16,7 @@ function Edit({ params }) {
     description: "",
     imageUrl: "",
     bannerUrl: "",
+    shortDesc: ""
   });
 
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,12 @@ function Edit({ params }) {
       type: "datetime-local",
     },
     { name: "auctionEnd", label: "Auction End Date", type: "datetime-local" },
+    {
+      name: "shortDesc",
+      label: "Short Description",
+      type: "textarea",
+      placeholder: "Short description of the auction",
+    },
     {
       name: "description",
       label: "Description",
@@ -69,6 +76,7 @@ function Edit({ params }) {
               .slice(0, 16),
             auctionEnd: new Date(data.auctionEnd).toISOString().slice(0, 16),
             description: data.description,
+            shortDesc: data.shortDesc,
             imageUrl: data.imageUrl || "",
             bannerUrl: data.bannerUrl || "",
           });
@@ -93,7 +101,6 @@ function Edit({ params }) {
 
     if (type === "file") {
       if (files.length > 0) {
-        // Check if a file is actually selected
         const file = files[0];
         const reader = new FileReader();
 

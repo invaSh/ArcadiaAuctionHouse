@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/nav/Navbar";
 import AdminNavbar from "@/app/components/admin/Navbar";
 import { getSession } from "./actions/authActions";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Arcadia Auction House",
@@ -26,6 +27,7 @@ export default async function RootLayout({ children }) {
         <main className={isAdmin ? "col-span-10 col-start-3 font-syne" : ""}>
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );

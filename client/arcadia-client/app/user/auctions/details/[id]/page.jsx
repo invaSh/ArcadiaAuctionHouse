@@ -1,7 +1,6 @@
 import React from "react";
 import AuctionHero from "@/app/components/auctions/AuctionHero";
 import { getDetailedView } from "@/app/actions/auctionActions";
-import { filterItems } from "@/app/actions/searchActions";
 import Items from "@/app/components/auctions/AuctionPageItems";
 import Link from "next/link";
 

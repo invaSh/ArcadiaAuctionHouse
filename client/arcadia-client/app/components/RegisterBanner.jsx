@@ -16,10 +16,20 @@ function RegisterBanner() {
     >
       <div className="lg:col-span-6"></div>
       <div
-        className="lg:col-span-6 h-[100%]"
-        style={{ backgroundColor: "rgb(65, 61, 73)" }}
+        className="lg:col-span-6 flex flex-col justify-center items-center h-[100%]"
+        style={{ backgroundColor: "#78747c" }}
       >
         <h1 className="text-4xl col">REGISTER TO BID</h1>
+        <i>
+          <p className="p-12 text-lg">
+            Create your account to start bidding and exploring exclusive
+            auctions. Join our community of art enthusiasts and collectors
+            today!
+          </p>
+          <p>
+            <u className="text-hover cursor-pointer">Register here</u>
+          </p>
+        </i>
       </div>
     </div>
   );

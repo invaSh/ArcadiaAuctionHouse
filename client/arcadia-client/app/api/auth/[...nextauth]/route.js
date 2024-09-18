@@ -34,7 +34,8 @@ export const authOptions = {
       session.user.roles = token.roles;
       return session;
     },
-  },async signIn({ account, profile, error }) {
+  },
+  async signIn({ account, profile, error }) {
     if (error) {
       console.error('OAuth error:', error);
     }

@@ -32,7 +32,7 @@ async function Navbar() {
       </span>
       <div className="flex gap-8 justify-end w-[80%]">
         <ul className="flex gap-5 text-white my-auto">
-          <li className="text-hover cursor-pointer">auctions</li>
+          <li className="text-hover cursor-pointer"><Link href={`/user/auctions`}>auctions</Link></li>
           <li className="text-hover cursor-pointer">
             <a>stories</a>
           </li>

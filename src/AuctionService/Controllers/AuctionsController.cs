@@ -108,18 +108,29 @@ namespace AuctionService.Controllers
 
             if (auction == null) return NotFound();
             if (auction.Seller != User.Identity.Name) return Forbid();
-
+            auction.Seller = User.Identity.Name;
             auction.Title = auctionDto.Title;
             auction.AuctionStart = auctionDto.AuctionStart;
             auction.UpdatedAt = DateTime.UtcNow;
             auction.ImageUrl = auctionDto.ImageUrl;
             auction.Description = auctionDto.Description;
+            auction.ShortDesc = auctionDto.ShortDesc;
             auction.TotalRevenue = auctionDto.TotalRevenue;
             auction.AuctionEnd = auctionDto.AuctionEnd;
-            if(auction.AuctionEnd >= DateTime.UtcNow)
+
+            if (auction.AuctionEnd < DateTime.UtcNow)
+            {
+                auction.Status = Status.Finished;
+            }
+            else if (auction.AuctionStart > DateTime.UtcNow)
+            {
+                auction.Status = Status.HasNotStarted;
+            }
+            else if (auction.AuctionStart <= DateTime.UtcNow && auction.AuctionEnd >= DateTime.UtcNow)
             {
                 auction.Status = Status.Live;
             }
+
 
             await _publishEndpoint.Publish(_mapper.Map<AuctionUpdated>(auctionDto));
 

@@ -17,6 +17,9 @@ export default async function ItemList({ searchParams }) {
   ];
   const link = "/admin/items/details/";
 
+  console.log(paginatedItems);
+  
+
   return (
     <div className="mt-12">
       <h1 className="text-center text-5xl">ITEMS</h1>

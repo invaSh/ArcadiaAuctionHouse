@@ -1,5 +1,5 @@
 import React from "react";
-
+import { CountDownTimer } from "./CountDownTimer";
 
 export default function AuctionHero({ auction }) {
   const formatDate = (dateString) => {
@@ -13,15 +13,14 @@ export default function AuctionHero({ auction }) {
     return date.toLocaleTimeString("en-US", timeOptions);
   };
 
-  console.log(auction);
-  
+  const now = new Date();
+  const auctionEndDate = new Date(auction.auctionEnd);
 
   return (
     <div
-      className="h-[70vh] w-[100%] text-white px-12 flex flex-col justify-between  tracking-widest"
+      className="h-[70vh] w-[100%] text-white px-12 flex flex-col justify-between tracking-widest"
       style={{
-        backgroundImage:
-          `url(${auction.bannerUrl})`,
+        backgroundImage: `url(${auction.bannerUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -29,21 +28,28 @@ export default function AuctionHero({ auction }) {
       }}
     >
       <div className="w-[80%] mx-auto">
-        <h3
-          className="text-2xl font-thin text-violet-100"
-          style={{ paddingTop: "100px" }}
-        >
-          Auction / {formatDate(auction.auctionStart)} /{" "}
-          {formatTime(auction.auctionStart)}
-        </h3>
+        <i>
+          <h3
+            className="text-2xl font-thin font-syne text-violet-100"
+            style={{ paddingTop: "100px" }}
+          >
+            Auction / {formatDate(auction.auctionStart)} /{" "}
+            {formatTime(auction.auctionStart)}
+          </h3>
+        </i>
         <hr />
       </div>
       <div className="flex justify-between mb-10 align-middle">
         <h1 className="text-6xl p-10 my-auto text-shadow">{auction.title}</h1>
-        <div className="p-10 text-6xl" style={{ backgroundColor: "rgb(65, 61, 73)" }}>
-          <p className="text-base text-center">LIVE AUCTION</p>
-          24d : 35h : 32 s
-        </div>
+        {auctionEndDate > now && (
+          <div
+            className="p-10 text-6xl"
+            style={{ backgroundColor: "rgb(65, 61, 73)" }}
+          >
+            <p className="text-base text-center">LIVE AUCTION</p>
+            <CountDownTimer auctionEnd={auctionEndDate} />
+          </div>
+        )}
       </div>
     </div>
   );

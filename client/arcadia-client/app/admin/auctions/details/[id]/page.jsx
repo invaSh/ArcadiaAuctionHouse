@@ -66,7 +66,7 @@ async function Details({ params }) {
                 <img
                   src={auction.bannerUrl}
                   alt={`Image of ${auction.title}`}
-                  className="w-full sm:max-w-xs"
+                  className="w-full sm:max-w-xs object-cover"
                 />
               </dd>
             </div>

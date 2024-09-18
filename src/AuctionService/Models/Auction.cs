@@ -14,6 +14,7 @@
             public int TotalRevenue { get; set; }
             public string BannerUrl { get; set; }
             public string Description { get; set; }
-            public ICollection<Item> Items { get; set; } = new List<Item>();
+            public string ShortDesc { get; set; }
+        public ICollection<Item> Items { get; set; } = new List<Item>();
     }
 }
