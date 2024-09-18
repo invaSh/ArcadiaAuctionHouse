@@ -1,9 +1,14 @@
-import React from 'react';
-import { getUsers } from '@/app/actions/userActions';
-import Link from 'next/link';
+import React from "react";
+import { getPaginatedUsers } from "@/app/actions/userActions";
+import Pagination from "@/app/components/admin/Pagination";
 
-async function List() {
-  const users = await getUsers();
+import Link from "next/link";
+
+async function List({ searchParams }) {
+  const page = parseInt(searchParams.page) || 1;
+  const { paginatedUsers, totalPages, currentPage } = await getPaginatedUsers(
+    page
+  );
 
   return (
     <div className="overflow-x-auto p-12">
@@ -11,29 +16,57 @@ async function List() {
       <table className="w-full min-w-max text-left border-collapse">
         <thead>
           <tr>
-            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">Image</th>
-            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">Username</th>
-            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">Email</th>
-            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">Full Name</th>
-            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">Actions</th>
+            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">
+              Image
+            </th>
+            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">
+              Username
+            </th>
+            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">
+              Email
+            </th>
+            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">
+              Full Name
+            </th>
+            <th className="px-4 py-2 border-b border-gray-200 bg-gray-50 text-gray-600">
+              Actions
+            </th>
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {paginatedUsers.map((user) => (
             <tr key={user.id} className="bg-white hover:bg-gray-50">
               <td className="px-4 py-3 border-b border-gray-200">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Avatar" className="h-10 w-10 rounded-full" />
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                  alt="Avatar"
+                  className="h-10 w-10 rounded-full"
+                />
               </td>
-              <td className="px-4 py-3 border-b border-gray-200">{user.userName}</td>
-              <td className="px-4 py-3 border-b border-gray-200">{user.email}</td>
-              <td className="px-4 py-3 border-b border-gray-200">{user.fullName}</td>
               <td className="px-4 py-3 border-b border-gray-200">
-                <Link href={`/admin/users/details/${user.id}`} className="text-gray-600 text-hover">View More</Link>
+                {user.userName}
+              </td>
+              <td className="px-4 py-3 border-b border-gray-200">
+                {user.email}
+              </td>
+              <td className="px-4 py-3 border-b border-gray-200">
+                {user.fullName}
+              </td>
+              <td className="px-4 py-3 border-b border-gray-200">
+                <Link
+                  href={`/admin/users/details/${user.id}`}
+                  className="text-gray-600 text-hover"
+                >
+                  View More
+                </Link>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <div className="my-12">
+        <Pagination totalPages={totalPages} currentPage={currentPage} />
+      </div>
     </div>
   );
 }

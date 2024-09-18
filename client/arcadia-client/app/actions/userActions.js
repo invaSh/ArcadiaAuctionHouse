@@ -20,3 +20,21 @@ export async function getUsers(){
 }
 
 
+export async function getPaginatedUsers(page) {
+    const allAcc = await fetchWrapper.get("users");
+    const pageSize = 5;
+    const pageNumber = page || 1;
+    const startIndex = (pageNumber - 1) * pageSize;
+    const paginatedUsers = allAcc.slice(
+      startIndex,
+      startIndex + pageSize
+    );
+  
+    return{
+      paginatedUsers,
+      totalPages: Math.ceil(allAcc.length / pageSize),
+      currentPage: pageNumber
+    }
+  }
+  
+
