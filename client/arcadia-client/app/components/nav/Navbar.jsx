@@ -34,7 +34,7 @@ async function Navbar() {
         <ul className="flex gap-5 text-white my-auto">
           <li className="text-hover cursor-pointer"><Link href={`/user/auctions`}>auctions</Link></li>
           <li className="text-hover cursor-pointer">
-            <a>stories</a>
+            <Link href={`/user/stories/list`}>stories</Link>
           </li>
         </ul>
         {session?.user ? <UserActions user={session.user} /> : <LoginButton />}

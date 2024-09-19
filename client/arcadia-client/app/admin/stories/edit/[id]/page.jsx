@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getStory, updateStory } from "@/app/actions/storyActions";
-import { addImage } from "@/app/actions/imageActions";
 import Form from "@/app/components/admin/StoriesForm";
 
 export default function EditStory({ params }) {

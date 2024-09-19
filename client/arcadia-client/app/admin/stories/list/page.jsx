@@ -8,7 +8,7 @@ async function List({ searchParams }) {
   const { paginagtedSts, totalPages, currentPage } = await getPaginatedStories(page);
 
   return (
-    <div className="container w-[60%] mx-auto px-4 py-8 font-syne">
+    <div className="container mx-auto px-4 py-8 font-syne">
       <div className="px-4 my-12 text-center sm:px-6">
         <h2 className="text-3xl leading-6 font-medium text-gray-900">Stories List</h2>
       </div>
@@ -17,6 +17,9 @@ async function List({ searchParams }) {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
+                <th className="py-3 text-left px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  ID
+                </th>
                 <th className="py-3 text-left px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Title
                 </th>
@@ -31,6 +34,9 @@ async function List({ searchParams }) {
             <tbody className="bg-white divide-y divide-gray-200">
               {paginagtedSts.map((story) => (
                 <tr key={story.id}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-900">{story.id}</div>
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-900">{story.title}</div>
                   </td>

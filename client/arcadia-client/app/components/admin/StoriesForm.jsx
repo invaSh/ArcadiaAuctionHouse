@@ -1,19 +1,19 @@
 import React from "react";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 import "froala-editor/css/froala_editor.pkgd.min.css";
 import "froala-editor/css/froala_style.min.css";
+import "froala-editor/js/plugins/image.min.js";
+import "froala-editor/js/plugins/file.min.js";
+import "froala-editor/js/plugins/video.min.js";
 
 const FroalaEditor = dynamic(() => import("react-froala-wysiwyg"), {
-    ssr: false
-  });
+  ssr: false,
+});
 const Form = ({ title, values, onChange, onSubmit }) => {
-
-    
-
   return (
     <div className="flex items-center justify-center mx-auto px-4 w-full">
-       <form className="w-full max-w-4xl shadow-md p-5" onSubmit={onSubmit}>
+      <form className="w-full max-w-4xl shadow-md p-5" onSubmit={onSubmit}>
         <h2 className="text-xl font-bold mb-6">{title}</h2>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">

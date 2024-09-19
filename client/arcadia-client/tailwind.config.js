@@ -20,6 +20,7 @@ module.exports = {
         playfair: ["Playfair Display SC"],
         poppins: ["Poppins"],
         alegreya : ["Alegreya"],
+        playfairdis: ["Playfair Display"]
       }
     },
   },
