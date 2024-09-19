@@ -13,6 +13,7 @@ COPY src/IdentityService/IdentityService.csproj src/IdentityService/IdentityServ
 COPY src/NotificationService/NotificationService.csproj src/NotificationService/NotificationService.csproj
 COPY src/Contracts/Contracts.csproj src/Contracts/Contracts.csproj
 COPY src/ImageService/ImageService.csproj src/ImageService/ImageService.csproj
+COPY src/StoryService/StoryService.csproj src/StoryService/StoryService.csproj
 
 #Restore package deps
 RUN dotnet restore ArcadiaAuctionHouse.sln
