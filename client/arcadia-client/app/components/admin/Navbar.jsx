@@ -39,7 +39,7 @@ export default function Navbar() {
           <ListItemPrefix>
             <MdDashboard className="h-5 w-5 mr-2" />
           </ListItemPrefix>
-          Dashboard
+          <Link href={`/admin`}>Dashboard</Link>
         </ListItem>
 
         <Menu placement="right-start font-syne">
@@ -102,12 +102,29 @@ export default function Navbar() {
           <Link href={`/admin/bids/list`}>Bids</Link>
         </ListItem>
 
-        <ListItem>
-          <ListItemPrefix>
-            <FaBookOpen className="h-5 w-5 mr-2" />
-          </ListItemPrefix>
-          Stories
-        </ListItem>
+        <Menu placement="right-start font-syne">
+          <MenuHandler>
+            <ListItem className="cursor-pointer flex justify-between items-center">
+              <div className="flex items-center">
+                <ListItemPrefix>
+                  <FaBookOpen className="h-5 w-5 mr-2" />
+                </ListItemPrefix>
+                Stories
+              </div>
+              <FaChevronDown className="h-4 w-4" />
+            </ListItem>
+          </MenuHandler>
+          <MenuList className="bg-white p-3 font-syne">
+            <MenuItem className="p-2 border-b-2 text-lg flex">
+              <FaAngleRight className="my-auto mr-2" />
+              <Link href={`/admin/stories/create`}>Create New Story</Link>
+            </MenuItem>
+            <MenuItem className="p-2 text-lg flex">
+              <FaAngleRight className="my-auto mr-2" />
+              <Link href={`/admin/stories/list`}>View All Stories</Link>
+            </MenuItem>
+          </MenuList>
+        </Menu>
         <ListItem>
           <ListItemPrefix>
             <FaWandSparkles className="h-5 w-5 mr-2" />

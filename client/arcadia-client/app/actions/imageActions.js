@@ -12,7 +12,6 @@ export async function addImage(file, id, imageType) {
 export async function addItemImages(files, id) {
     let formData = new FormData();
   
-    // Append each file to the formData
     for (let i = 0; i < files.length; i++) {
       formData.append('images', files[i]);
     }

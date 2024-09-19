@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { deleteAuction } from "@/app/actions/auctionActions";
 import { deleteItem } from "@/app/actions/itemActions";
 import { deleteUser } from "@/app/actions/userActions";
+import { deleteSory } from "@/app/actions/storyActions";
 
 function DeleteButton({id, entityName, redirectUrl}) {
   const [confirmDelete, setConfirmDelete] = useState(false); 
@@ -17,8 +18,12 @@ function DeleteButton({id, entityName, redirectUrl}) {
         await deleteAuction(id);
       } else if (entityName === "Item") {
         await deleteItem(id);
-      }else if (entityName === "User") {
+      }
+      else if (entityName === "User") {
         await deleteUser(id);
+      }
+      else if (entityName === "Story") {
+        await deleteSory(id);
       }
 
       window.location.href = redirectUrl;

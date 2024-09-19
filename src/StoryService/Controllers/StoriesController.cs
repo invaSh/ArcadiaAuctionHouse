@@ -43,6 +43,7 @@ namespace StoryService.Controllers
         {
             var story = _mapper.Map<Story>(storyDto);
             story.Author = User.FindFirstValue("name");
+            story.PublishedDate = DateTime.UtcNow;
             _context.Stories.Add(story);
             var result = await _context.SaveChangesAsync() > 0;
             if (!result) return BadRequest("Couldn't create story");
