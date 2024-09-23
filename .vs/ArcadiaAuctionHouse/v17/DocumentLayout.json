@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35B782DB-C8DB-48BD-AE55-9584B6EFC5B8}|src\\ImageService\\ImageService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\imageservice\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35B782DB-C8DB-48BD-AE55-9584B6EFC5B8}|src\\ImageService\\ImageService.csproj|solutionrelative:src\\imageservice\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{578F054B-E4C8-4F86-8EEA-D0FFF9EBF97E}|src\\NotificationService\\NotificationService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\notificationservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{578F054B-E4C8-4F86-8EEA-D0FFF9EBF97E}|src\\NotificationService\\NotificationService.csproj|solutionrelative:src\\notificationservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1E1F59B-6598-4F0B-BEBD-53FC1F3F9B48}|src\\StoryService\\StoryService.csproj|c:\\users\\admin\\desktop\\projekte\\.net_microservices_next.js_arcadia_auction_house\\arcadia\\src\\storyservice\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1E1F59B-6598-4F0B-BEBD-53FC1F3F9B48}|src\\StoryService\\StoryService.csproj|solutionrelative:src\\storyservice\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D87D7BA3-1478-4441-AC21-14D78C93575D}|Solution Items{D87D7BA3-1478-4441-AC21-14D78C93575D}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 245,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +26,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MediaController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\ImageService\\Controllers\\MediaController.cs",
-              "RelativeDocumentMoniker": "src\\ImageService\\Controllers\\MediaController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\ImageService\\Controllers\\MediaController.cs",
-              "RelativeToolTip": "src\\ImageService\\Controllers\\MediaController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAcwE8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T15:59:25.916Z",
+              "DocumentIndex": 1,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-09-23T12:12:20.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\StoryService\\Controllers\\StoriesController.cs",
-              "RelativeDocumentMoniker": "src\\StoryService\\Controllers\\StoriesController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\StoryService\\Controllers\\StoriesController.cs",
-              "RelativeToolTip": "src\\StoryService\\Controllers\\StoriesController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwC0AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T15:36:24.231Z"
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\NotificationService\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\NotificationService\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\projekte\\.NET_Microservices_Next.Js_Arcadia_Auction_House\\Arcadia\\src\\NotificationService\\appsettings.Development.json",
+              "RelativeToolTip": "src\\NotificationService\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-23T12:09:33.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 155,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

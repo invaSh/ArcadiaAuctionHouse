@@ -11,7 +11,7 @@ export default function AuctionCard(props) {
 
   return (
     <div className="card overflow-hidden text-center  h-full">
-      <img src={auction.imageUrl} className="mx-auto"/>
+      <img src={auction.imageUrl} className="mx-auto object-contain"/>
       <div className="p-4">
         <h2
           className="text-lg my-2 truncate"

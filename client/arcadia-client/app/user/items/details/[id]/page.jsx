@@ -5,6 +5,7 @@ import { getHighestBid } from "@/app/actions/bidActions";
 import { getSession } from "@/app/actions/authActions";
 import ImageGalleryModal from "@/app/components/ImageGalleryModal";
 import { incrementViewCount } from "@/app/actions/dashboardActions";
+import { getDetailedView as getAuction } from "@/app/actions/auctionActions";
 
 async function Details({ params }) {
   const item = await getDetailedView(params.id);
@@ -14,7 +15,7 @@ async function Details({ params }) {
   const itemImageUrls = item.imageUrls;
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = today.toLocaleDateString("en-US", options);
-
+  const auction = await getAuction(item.auctionId);
   await incrementViewCount(params.id);
 
   return (
@@ -90,31 +91,35 @@ async function Details({ params }) {
                 </p>
               </div>
             </div>
-            <div className="border-b border-gray-300 py-10 text-center">
-              <div className="flex justify-center gap-5">
-                <p>
-                  starting bid: $
-                  {item.reservePrice ? item.reservePrice : `1000`}
-                </p>
-                <p>
-                  current highest bid: $
-                  {item.currentHighBid ? item.currentHighBid : `0`}
-                </p>
+            {new Date(auction.auctionEnd) > today && (
+              <div>
+                <div className="border-b border-gray-300 py-10 text-center">
+                  <div className="flex justify-center gap-5">
+                    <p>
+                      starting bid: $
+                      {item.reservePrice ? item.reservePrice : `1000`}
+                    </p>
+                    <p>
+                      current highest bid: $
+                      {item.currentHighBid ? item.currentHighBid : `0`}
+                    </p>
+                  </div>
+                  <PlaceBidForm item={item} id={params.id} />
+                </div>
+                <div className="border-b border-gray-300 py-10 text-center">
+                  {bid.error ? (
+                    <span>{bid.error.message}</span>
+                  ) : (
+                    <span>
+                      Your current Bid:{" "}
+                      <span className="ml-5 border p-5 shadow-md">
+                        ${bid.amount}
+                      </span>
+                    </span>
+                  )}
+                </div>
               </div>
-              <PlaceBidForm item={item} id={params.id} />
-            </div>
-            <div className="border-b border-gray-300 py-10 text-center">
-              {bid.error ? (
-                <span>{bid.error.message}</span>
-              ) : (
-                <span>
-                  Your current Bid:{" "}
-                  <span className="ml-5 border p-5 shadow-md">
-                    ${bid.amount}
-                  </span>
-                </span>
-              )}
-            </div>
+            )}
           </div>
         </div>
       )}

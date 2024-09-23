@@ -6,7 +6,7 @@ function AuctionItemCard({ index, item }) {
       <img src={item.imageUrl} className="img-hover" alt="" />
       <div className="mt-5 text-hover">
         <Link href={`/user/items/details/${item.id}`}>
-          <h4>
+          <h4 className="truncate">
             <span className="text-gray-500 text-3xl mr-3">{index + 1}</span>{" "}
             <span className="font-syne text-xl uppercase font-bold truncate">
               {item.title}

@@ -78,7 +78,7 @@ function Notifications() {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h3 className="text-2xl my-12 text-center font-semibold">
-        New Notifications
+        Notifications
       </h3>
       <div>
         <ul className="space-y-4">
@@ -138,7 +138,6 @@ function Notifications() {
       </div>
 
       <div className="mt-8">
-        <h3 className="text-xl font-semibold mb-2">Viewed Notifications</h3>
         <ul className="space-y-4">
           {viewedNotifications.length === 0 ? (
             <li className="text-gray-500">No viewed notifications</li>
